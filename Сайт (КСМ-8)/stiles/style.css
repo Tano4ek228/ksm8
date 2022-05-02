@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*___________________________________Шапка_________________________________*/
+
+.header {
+    background-image: url(/images/fon-header1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header-line {
+    display: flex;
+    padding: 0px 130px;
+    justify-content: center;
+}
+
+
+/* Логотип */
+
+.header-logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-text>ul {
+    display: flex;
+    list-style-type: none;
+    padding-top: 36px;
+    padding-left: 40px;
+}
+
+
+/* Текст шапки */
+
+.header_text {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header_text:hover {
+    color: #F2B33A;
+}
+
+
+/* [Кнопка Войти] */
+
+.button_sign_in {
+    color: #252525;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FDF7F5;
+    padding: 4px 34px;
+    margin-right: 40px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header-cart {
+    margin-top: 30px;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Шапка^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+/*________________________________Главный текст_______________________________*/
+
+
+/* Отступы главного текста шапки */
+
+.G_text_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.G_text {
+    color: #F2B33A;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 42px;
+    width: 700px;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 40px;
+}
+
+.g2_text {
+    color: #E8E8E8;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 28px;
+    width: 1000px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+
+/* [Кнопка "Заказ"] */
+
+.btn_zakaz>a {
+    color: #252525;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #F2B33A;
+    padding: 17px 49px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn_zakaz:hover {
+    transform: scale(1.03);
+}
+
+
+/* [Кнопка "Подробнее"] */
+
+.btn_podrobno>a {
+    color: #F3F3F3;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+    border-style: solid;
+    border-width: 3px;
+    padding: 14px 28px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn_podrobno:hover {
+    transform: scale(1.03);
+}
+
+.btns {
+    display: flex;
+    padding-top: 150px;
+}
+
+.btn_zakaz {
+    padding-right: 100px;
+}
+
+
+/* ---------------------------------Слайдер--------------------------------- */
+
+
+/* стрелки */
+
+
+/* 
+.left,
+.right {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border-color: #F3F3F3;
+    border-style: solid;
+    border-width: 6px;
+}
+
+.left {
+    border-top: 50px;
+    border-left: 50px;
+    transform: rotate(-45deg);
+    margin-right: 0px;
+}
+
+.right {
+    border-top: 50px;
+    border-left: 50px;
+    transform: rotate(135deg);
+    margin-right:
+} */
+
+
+/* -^-^-^-^-^-^-^-^-^-^-^-^-^-^-^- Слайдер -^-^-^-^-^-^-^-^-^-^-^-^-^-^-^- */
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Главный текст ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  */
+
+
+/*___________________________________Тело___________________________________*/
+
+main {
+    background-color: #005976;
+}
+
+
+/* !Отступы слева, справа, сверху для тела */
+
+.container_main {
+    padding-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 40px;
+}
+
+
+/*----------------------------------Заявка----------------------------------*/
+
+
+/* Оформление формы заявки */
+
+.zayavka_block {
+    background-color: #252525;
+    border-radius: 25px;
+}
+
+.zayavka>h2 {
+    color: #F2B33A;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.text_zayavka>p {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.text_zayavka>input {
+    color: #252525;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+input.name {
+    margin-right: 20px;
+}
+
+.text_zayavka {
+    display: flex;
+}
+
+
+/* [Кнопка "Оставить заявку"] */
+
+.ostavit_zayavk {
+    text-decoration: none;
+    color: #252525;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    background-color: #F2B33A;
+    padding: 15px 40px;
+    border-radius: 15px;
+    margin-top: 40px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.ostavit_zayavk:hover {
+    transform: scale(1.03);
+}
+
+
+/* [] */
+
+
+/* контент заявки по центру */
+
+.zayavka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+
+/* -^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-Заявка-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^*/
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Тело^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* ________________________________ Футер ________________________________  */
+
+footer {
+    background-color: #3A3A3A;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Футер ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
