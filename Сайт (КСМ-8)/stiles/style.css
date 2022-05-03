@@ -6,13 +6,14 @@
 
 /*___________________________________Шапка_________________________________*/
 
-.header {
-    background-image: url(/images/fon-header1.jpg);
+
+/* .header {
+    background-image: url(images/fon-header1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;
-}
+} */
 
 .header-line {
     display: flex;
