@@ -40,7 +40,7 @@ BasketMaterial.belongsTo(Material)
 Type.hasMany(Material)
 Material.belongsTo(Type)
 
-Material.hasMany(MaterialInfo)
+Material.hasMany(MaterialInfo, { as: 'info' })
 MaterialInfo.belongsTo(Material)
 
 module.exports = {
