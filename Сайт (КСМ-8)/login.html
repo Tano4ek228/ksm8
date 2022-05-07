@@ -13,32 +13,36 @@
 
 <body>
 
-    <header>
-        <div class="header">
+    <header id="header" class="header">
+        <div class="header-container">
             <div class="header-line">
+                <a class="logo" href="index.html">
+                    <img src="images/header-logo.png" width="175px" height="50px">
+                </a>
 
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="images/header-logo.png" width="200px" height="60px">
-                    </a>
-                </div>
+                <ul class="header-menu">
+                    <li>
+                        <a href="#">Продукция</a>
+                        <ul class="drop-down_menu">
+                            <div class="drop-down_menu_bg">
+                                <li><a href="#">Бетон</a></li>
+                                <li><a href="#">Кольца стеновые</a></li>
+                                <li><a href="#">Блоки ФБС</a></li>
+                                <li><a href="#">Керамзитобетон</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="price.html">Прайс</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Телефон</a></li>
+                </ul>
 
-                <div class="header-text">
-                    <ul>
-                        <li><a class="header_text" href="#">ПРОДУКЦИЯ</a></li>
-                        <li><a class="header_text" href="#">ДОСТАВКА</a></li>
-                        <li><a class="header_text" href="#">ПРАЙС</a></li>
-                        <li><a class="header_text" href="#">КОНТАКТЫ</a></li>
-                        <li><a class="header_text" href="#">ТЕЛЕФОН</a></li>
-                        <li><a class="button_sign_in" href="#">Войти</a></li>
-                    </ul>
-                </div>
+                <a class="button_sign_in" href="login.html">Войти</a>
 
-                <div class="header-cart">
-                    <a href="#">
-                        <img src="images/Корзина.svg" width="65">
-                    </a>
-                </div>
+                <a class="header-cart" href="#">
+                    <img src="images/Корзина.svg" width="65">
+                </a>
             </div>
         </div>
     </header>

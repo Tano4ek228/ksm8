@@ -3,53 +3,96 @@
     padding: 0px;
 }
 
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 
 /*___________________________________Шапка_________________________________*/
 
+.header {
+    background: url(/images/fon-header1.jpg) no-repeat center top / cover;
+    background-color: #005976;
+}
 
-/* .header {
-    background-image: url(images/fon-header1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-} */
+.header-container {
+    max-width: 1365px;
+    margin: 0 auto;
+}
+
+
+/* шапка в одну линию */
 
 .header-line {
     display: flex;
-    padding: 0px 130px;
+    align-items: center;
     justify-content: center;
+    padding-top: 20px;
+    margin: 0 20px;
 }
 
 
 /* Логотип */
 
-.header-logo {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.header-text>ul {
-    display: flex;
-    list-style-type: none;
-    padding-top: 36px;
-    padding-left: 40px;
-}
-
-
-/* Текст шапки */
-
-.header_text {
-    color: #ffffff;
-    text-decoration: none;
+.logo {
     margin-right: 40px;
+}
+
+
+/* Меню */
+
+.header-menu li {
+    list-style-type: none;
+    position: relative;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #E7E7E7;
+}
+
+.header-menu {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-menu>li>a {
+    text-decoration: none;
     font-size: 24px;
     font-family: 'IBM Plex Sans', sans-serif;
     text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-right: 40px;
 }
 
-.header_text:hover {
+.drop-down_menu {
+    display: none;
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.drop-down_menu_bg>li {
+    padding: 5px 10px;
+}
+
+.drop-down_menu_bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.drop-down_menu_bg>li>a {
+    font-size: 18px;
+}
+
+.header-menu li a:hover {
     color: #F2B33A;
+}
+
+.header-menu>li:hover .drop-down_menu {
+    display: block;
 }
 
 
@@ -58,19 +101,15 @@
 .button_sign_in {
     color: #252525;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 23px;
     font-family: 'Ubuntu', sans-serif;
     background-color: #FDF7F5;
     padding: 4px 34px;
     margin-right: 40px;
     border-radius: 10px;
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-}
-
-.header-cart {
-    margin-top: 30px;
 }
 
 
@@ -146,7 +185,8 @@
 
 .btns {
     display: flex;
-    padding-top: 150px;
+    margin-top: 150px;
+    margin-bottom: 250px;
 }
 
 .btn_zakaz {
@@ -154,36 +194,7 @@
 }
 
 
-/* ---------------------------------Слайдер--------------------------------- */
-
-
-/* стрелки */
-
-
-/* 
-.left,
-.right {
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    border-color: #F3F3F3;
-    border-style: solid;
-    border-width: 6px;
-}
-
-.left {
-    border-top: 50px;
-    border-left: 50px;
-    transform: rotate(-45deg);
-    margin-right: 0px;
-}
-
-.right {
-    border-top: 50px;
-    border-left: 50px;
-    transform: rotate(135deg);
-    margin-right:
-} */
+/* ------------------------------- Слайдер ------------------------------- */
 
 
 /* -^-^-^-^-^-^-^-^-^-^-^-^-^-^-^- Слайдер -^-^-^-^-^-^-^-^-^-^-^-^-^-^-^- */
