@@ -58,10 +58,12 @@ body {
 
 .header-menu>li>a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
     text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
     margin-right: 40px;
+    text-transform: uppercase;
 }
 
 .drop-down_menu {
@@ -109,7 +111,14 @@ body {
     border-radius: 10px;
     border-style: solid;
     border-width: 3px;
+    border-color: #252525;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+}
+
+.button_sign_in:hover {
+    background-color: #252525;
+    color: #FDF7F5;
 }
 
 
@@ -147,7 +156,7 @@ body {
 }
 
 
-/* [Кнопка "Заказ"] */
+/* [Кнопка "Заказать"] */
 
 .btn_zakaz>a {
     color: #252525;
@@ -158,6 +167,16 @@ body {
     padding: 17px 49px;
     border-radius: 15px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.btn_zakaz>a:hover {
+    background-color: #252525;
+    color: #E8E8E8;
+}
+
+.btn_zakaz {
+    transition: 0.10s;
 }
 
 .btn_zakaz:hover {
@@ -177,11 +196,25 @@ body {
     padding: 14px 28px;
     border-radius: 15px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.btn_podrobno>a:hover {
+    color: #252525;
+    background-color: #E7E7E7;
+    border-color: #E7E7E7;
+}
+
+.btn_podrobno {
+    transition: 0.10s;
 }
 
 .btn_podrobno:hover {
     transform: scale(1.03);
 }
+
+
+/* отступы для кнопок */
 
 .btns {
     display: flex;
@@ -190,7 +223,7 @@ body {
 }
 
 .btn_zakaz {
-    padding-right: 100px;
+    margin-right: 100px;
 }
 
 
