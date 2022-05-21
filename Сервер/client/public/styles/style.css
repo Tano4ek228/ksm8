@@ -299,8 +299,8 @@ a {
 /*___________________________________Тело___________________________________*/
 
 main {
-	background-color: #ececec;
-	background: url(../images/bg_beton.jpg);
+	background: linear-gradient(90deg, #02435d, #526e7a);
+	height: 100vh;
 }
 
 
@@ -570,7 +570,7 @@ input.name {
 }
 
 footer {
-	background-color: #3A3A3A;
+	background-color: #2b2d30;
 	color: rgb(219, 219, 219);
 	font-size: 18px;
 	padding: 40px 180px;
