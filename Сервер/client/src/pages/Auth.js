@@ -44,5 +44,4 @@ const Auth = () => {
             </Container>
     )
 }
-
 export default Auth;
