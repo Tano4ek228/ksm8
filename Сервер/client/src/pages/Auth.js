@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import {Form,Button, Container} from "react-bootstrap"
 import Row from "react-bootstrap/Row"
 import Card from "react-bootstrap/Card"
-import {LOGIN_ROUTE} from "../utils/const"
+import {NavLink,useLocation} from  "react-router-dom"
+import {LOGIN_ROUTE, REGISTRATION_ROUTE} from "../utils/const"
 import {login,registration} from "../http/userAPI"
 
 const Auth = () => {
-    const isLogin = window.location.href === LOGIN_ROUTE
+    const location = useLocation()
+    const isLogin = location.pathname === LOGIN_ROUTE
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
 
@@ -36,9 +38,20 @@ const Auth = () => {
                     className="mt-3"
                     placeholder="Введите ваш пароль"
                     />
-                    <Button className = "mt-3" variant={"outline-success"}>
-                        Войти
+                    <Row className="d-flex justify-content-between mt-3 pl-3 pr-3">
+                        {isLogin ?
+                        <div>
+                            Нет аккаунта? <NavLink to = {REGISTRATION_ROUTE}>Зарегистрируйтесь!</NavLink>
+                        </div>
+                        :
+                        <div>
+                            Есть аккаунт? <NavLink to = {LOGIN_ROUTE}>Войдите!</NavLink>
+                        </div>
+                    }
+                    <Button variant={"outline-success"}>
+                       {isLogin ? 'Войти' : 'Зарегистрироваться'}
                     </Button>
+                    </Row>
                     </Form>
                 </Card>
             </Container>
