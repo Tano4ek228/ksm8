@@ -5,6 +5,7 @@
 
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
+	background: linear-gradient(90deg, #02435d, #526e7a);
 }
 
 li {
@@ -300,7 +301,7 @@ a {
 
 main {
 	background: linear-gradient(90deg, #02435d, #526e7a);
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 
@@ -321,6 +322,10 @@ main {
 	padding: 40px 0 20px 0;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .products {
@@ -334,14 +339,15 @@ main {
 }
 
 .tovar_line {
-	display: flex;
+	display: grid;
 	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
 }
 
-.line_bottom {
-	margin-bottom: 20px;
-	margin-right: 20px;
-}
+
 
 .prod_none_bottom {
 	margin-right: 0px;
@@ -383,6 +389,10 @@ main {
 
 
 /* ! __________________________ Главный текст ___________________________ */
+
+.main_text {
+	color: #E7E7E7;
+}
 
 .main_text>h1 {
 	text-align: center;
@@ -431,7 +441,7 @@ main {
 }
 
 .offer>a {
-	color: #0f3ac9;
+	color: #F2B33A;
 	font-size: 24px;
 	text-decoration: underline;
 	font-weight: 600;
@@ -633,26 +643,18 @@ footer h2 {
 	margin-bottom: 10px;
 }
 
+
 @media(max-width:1595px) {
 	footer {
 		padding: 40px 100px;
 	}
 
-	.tovar {
-		flex-direction: column;
+	.tovar_line {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 	}
 
-	.line_right {
-		margin-right: 20px;
-	}
 
-	.line_bottom {
-		margin-bottom: 20px;
-	}
-
-	.prod_none_bottom {
-		margin-right: 20px;
-	}
 }
 
 @media(max-width:1438px) {
