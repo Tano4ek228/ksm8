@@ -2,24 +2,33 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap"
 import Row from "react-bootstrap/Row"
 import Card from "react-bootstrap/Card"
-import { NavLink, useLocation } from "react-router-dom"
-import { LOGIN_ROUTE, REGISTRATION_ROUTE } from "../utils/const"
+import { NavLink, useLocation ,useNavigate} from "react-router-dom"
+import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/const"
 import { login, registration } from "../http/userAPI"
 import './style_login.css';
+import {observer} from "mobx-react-lite"
 
-const Auth = () => {
+const Auth = observer(() => {
 	const location = useLocation()
+	const navigate = useNavigate()
 	const isLogin = location.pathname === LOGIN_ROUTE
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
 
 	const click = async () => {
-		if (isLogin) {
-			const responce = await login()
-		} else {
-			const responce = await registration()
-			console.log(responce)
+		try{
+			let data
+			if (isLogin) {
+				data = await login(email,password)
+				console.log(data)
+			} else {
+				data = await registration(email,password)
+			}
+			navigate("/")
+		}
+		catch(e){
+			alert(e)
 		}
 	}
 
@@ -36,14 +45,19 @@ const Auth = () => {
 						<Form.Control
 							className="log login"
 							placeholder="Введите ваш email"
+							value = {email}
+							onChange={e => setEmail(e.target.value)}
 						/>
 						<Form.Control
 							className="pass password"
 							placeholder="Введите ваш пароль"
+							value={password}
+							onChange={e => setPassword(e.target.value)}
+							type="password"
 						/>
 
 						<Container className="button_vhod">
-							<Button className="btn_vhod">
+							<Button className="btn_vhod" onClick={click}>
 								{isLogin ? 'Войти' : 'Зарегистрироваться'}
 							</Button>
 						</Container>
@@ -72,5 +86,5 @@ const Auth = () => {
 			</Container>
 		</Container>
 	)
-}
+})
 export default Auth;
