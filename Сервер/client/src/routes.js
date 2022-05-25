@@ -1,7 +1,8 @@
 import Admin from "./pages/Admin"
 import Auth from "./pages/Auth"
 import Shop from "./pages/Shop"
-import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utils/const"
+import Main from "./pages/Main"
+import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, MAIN_ROUTE } from "./utils/const"
 
 export const publicRoutes = [
 	{
@@ -19,5 +20,9 @@ export const publicRoutes = [
 	{
 		path: ADMIN_ROUTE,
 		Component: Admin
+	},
+	{
+		path: MAIN_ROUTE,
+		Component: Main
 	}
 ]

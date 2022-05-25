@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap"
 import Row from "react-bootstrap/Row"
 import Card from "react-bootstrap/Card"
-import { NavLink, useLocation ,useNavigate} from "react-router-dom"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/const"
 import { login, registration } from "../http/userAPI"
-import './style_login.css';
-import {observer} from "mobx-react-lite"
+import './style/style_login.css';
+import { observer } from "mobx-react-lite"
 
 const Auth = observer(() => {
 	const location = useLocation()
@@ -17,17 +17,17 @@ const Auth = observer(() => {
 
 
 	const click = async () => {
-		try{
+		try {
 			let data
 			if (isLogin) {
-				data = await login(email,password)
+				data = await login(email, password)
 				console.log(data)
 			} else {
-				data = await registration(email,password)
+				data = await registration(email, password)
 			}
 			navigate("/")
 		}
-		catch(e){
+		catch (e) {
 			alert(e)
 		}
 	}
@@ -45,7 +45,7 @@ const Auth = observer(() => {
 						<Form.Control
 							className="log login"
 							placeholder="Введите ваш email"
-							value = {email}
+							value={email}
 							onChange={e => setEmail(e.target.value)}
 						/>
 						<Form.Control
