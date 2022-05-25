@@ -2,7 +2,11 @@ import Admin from "./pages/Admin"
 import Auth from "./pages/Auth"
 import Shop from "./pages/Shop"
 import Main from "./pages/Main"
-import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, MAIN_ROUTE } from "./utils/const"
+import Basket from "./pages/Basket"
+import {
+	ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE,
+	SHOP_ROUTE, BASKET_ROUTE, MAIN_ROUTE
+} from "./utils/const"
 
 export const publicRoutes = [
 	{
@@ -24,5 +28,15 @@ export const publicRoutes = [
 	{
 		path: MAIN_ROUTE,
 		Component: Main
+	}
+]
+export const authRouters = [
+	{
+		path: ADMIN_ROUTE,
+		Component: Admin
+	},
+	{
+		path: BASKET_ROUTE,
+		Component: Basket
 	}
 ]

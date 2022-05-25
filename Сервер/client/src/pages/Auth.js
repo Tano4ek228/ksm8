@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap"
+import { Form, Button, Container, Alert } from "react-bootstrap"
 import Row from "react-bootstrap/Row"
 import Card from "react-bootstrap/Card"
 import { NavLink, useLocation, useNavigate } from "react-router-dom"
@@ -21,14 +21,16 @@ const Auth = observer(() => {
 			let data
 			if (isLogin) {
 				data = await login(email, password)
-				console.log(data)
+				alert("Вы успешно авторизовались")
+				navigate("/")
 			} else {
 				data = await registration(email, password)
+				navigate("/login")
 			}
-			navigate("/")
 		}
+
 		catch (e) {
-			alert(e)
+			alert(e.response.data.message)
 		}
 	}
 
