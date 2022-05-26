@@ -1,0 +1,45 @@
+.beton_info {
+	width: 100%;
+	height: 400px;
+	background-color: #434343;
+	border-radius: 25px;
+	margin-bottom: 30px;
+}
+
+.ShiftRight {
+	margin-left: 20px;
+}
+
+/* .main_text>.ShiftLeft {
+	text-align: left;
+	margin-bottom: 5px;
+} */
+
+.advantages_beton>li {
+	margin-bottom: 10px;
+}
+
+.betonm {
+	color: #c09a54;
+}
+
+.ShiftRight b {
+	color: #b6b6b6;
+}
+
+.delivery {
+	margin-bottom: 10px;
+	color: #F2B33A;
+}
+
+.delivery_beton>li {
+	margin-bottom: 5px;
+	margin-left: 40px;
+	list-style-type: disc;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.delivery_beton {
+	margin-bottom: 40px;
+}

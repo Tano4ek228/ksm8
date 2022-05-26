@@ -8,6 +8,11 @@ body {
 	background: linear-gradient(90deg, #02435d, #526e7a);
 }
 
+a {
+	text-decoration: none;
+	color: #E7E7E7;
+}
+
 li {
 	list-style-type: none;
 }
@@ -403,6 +408,7 @@ main {
 
 .main_text>h2 {
 	font-weight: 500;
+	margin-bottom: 5px;
 }
 
 .main_text h1,
@@ -433,6 +439,7 @@ main {
 	background-color: #444444;
 	color: #f1f1f1;
 	padding: 20px;
+	padding-right: 40px;
 	text-align: center;
 	border-radius: 10px;
 	margin: 40px 0;
@@ -523,7 +530,7 @@ main {
 	color: #F2B33A;
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 30px;
-	margin: 30px 0;
+	margin: 30px 0 30px 0;
 }
 
 .input_zayavka>input {
@@ -567,6 +574,7 @@ input.name {
 .ostavit_zayavk:hover {
 	background-color: #252525;
 	color: #E8E8E8;
+	cursor: pointer;
 }
 
 
@@ -626,25 +634,25 @@ footer h2 {
 }
 
 .address:before {
-	content: url(../images/address.png);
+	content: url(../images/footer/address.png);
 	margin-right: 10px;
 	vertical-align: middle;
 }
 
 .tel:before {
-	content: url(../images/tel.png);
+	content: url(../images/footer/tel.png);
 	margin-right: 10px;
 	vertical-align: middle;
 }
 
 .time:before {
-	content: url(../images/time.png);
+	content: url(../images/footer/time.png);
 	margin-right: 10px;
 	vertical-align: middle;
 }
 
 .email:before {
-	content: url(../images/email.png);
+	content: url(../images/footer/email.png);
 	margin-right: 10px;
 	vertical-align: middle;
 }
@@ -659,6 +667,25 @@ footer h2 {
 .map_items>h2 {
 	margin-bottom: 10px;
 }
+
+/* vvv Scroll Up vvv */
+
+.up {
+	display: none;
+	position: fixed;
+	cursor: pointer;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	outline: none;
+	background-color: transparent;
+	color: #e7e7e7;
+	padding: 7px 10px;
+	border-radius: 10px;
+	font-size: 60px;
+}
+
+/* ^^^ Scrol up ^^^ */
 
 
 @media(max-width:1595px) {

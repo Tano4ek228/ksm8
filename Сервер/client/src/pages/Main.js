@@ -8,7 +8,7 @@ const Main = () => {
 		elements.push(
 			<div class="products line_right line_bottom">
 				<h2>{nameTovar[i]}</h2>
-				<img src={`/images/${nameShop[i]}.jpg`} alt=""></img>
+				<img src={`/images/main_tovar/${nameShop[i]}.jpg`} alt=""></img>
 				<h3>
 					Производство и доставка высококачественного товарного бетона и раствора всех марок.
 				</h3>
@@ -36,25 +36,25 @@ const Main = () => {
 						наших клиентов и их постоянным сотрудничеством с «КСМ-8».
 					</p>
 					<h2 class="main_text_h2">Бетонный завод в Ростове-на-Дону</h2>
-					<p>
+					<p class="main_text_p">
 						Бетонный завод - находится в Ростове-на-Дону по адресу: ул.1-я Луговая,32 Б. Удобное расположение
 						бетонного завода позволяет нам оперативно в течении 1-2 часов доставить товарный бетон в любой район
 						города Ростова, а удобный выезд на федеральные трассы
 						позволяет нам работать и обеспечивать быструю доставку нашей продукции во все в города Ростовской
 						области.
 					</p>
-					<p>
+					<p class="main_text_p">
 						<b>Производительность РБУ</b> - составляет до 60-80 м3 в час. Процесс производства максимально
 						автоматизирован, а технология изготовления позволяет производить бетон с высокими эксплуатационными
 						свойствами.
 					</p>
-					<h2>Производство</h2>
-					<p>
+					<h2 class="main_text_h2">Производство</h2>
+					<p class="main_text_p">
 						Мы производим все марки товарного бетона от М-100 до М-350 и товарного раствора от М-50 до М-200.
 						Бетон производится на высококачественных заполнителях и портландцементе марки ПЦМ 500 ДО, вся
 						продукция сертифицирована.
 					</p>
-					<p>
+					<p class="main_text_p">
 						Производство бетона осуществляется при входном контроле материалов, а также <i>выходной контроль
 							качества бетонной смеси</i> все экспертизы проводятся на базе собственной сертифицированной
 						лаборатории строительных материалов.
@@ -87,27 +87,27 @@ const Main = () => {
 						<div class="Partners">
 							<div>
 								<a href="/">
-									<img src="images/anastasiya.jpg" alt=""></img>
+									<img src="images/partners/anastasiya.jpg" alt=""></img>
 								</a>
 							</div>
 							<div>
 								<a href="/">
-									<img src="images/inrosstroy.jpg" alt=""></img>
+									<img src="images/partners/inrosstroy.jpg" alt=""></img>
 								</a>
 							</div>
 							<div>
 								<a href="/">
-									<img src="images/bsk-stroy.jpg" alt=""></img>
+									<img src="images/partners/bsk-stroy.jpg" alt=""></img>
 								</a>
 							</div>
 							<div>
 								<a href="/">
-									<img src="images/rosgilstroy.jpg" alt=""></img>
+									<img src="images/partners/rosgilstroy.jpg" alt=""></img>
 								</a>
 							</div>
 							<div>
 								<a href="/">
-									<img src="images/edinstvo.jpg" alt=""></img>
+									<img src="images/partners/edinstvo.jpg" alt=""></img>
 								</a>
 							</div>
 						</div>
