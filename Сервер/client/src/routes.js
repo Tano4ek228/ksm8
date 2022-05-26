@@ -1,4 +1,3 @@
-import Admin from "./pages/Admin"
 import Auth from "./pages/Auth"
 import Shop from "./pages/Shop"
 import Main from "./pages/Main"
@@ -24,10 +23,6 @@ export const publicRoutes = [
 		Component: Auth
 	},
 	{
-		path: ADMIN_ROUTE,
-		Component: Admin
-	},
-	{
 		path: MAIN_ROUTE,
 		Component: Main
 	},
@@ -44,7 +39,7 @@ export const publicRoutes = [
 export const authRouters = [
 	{
 		path: ADMIN_ROUTE,
-		Component: Admin
+		Component: AdminPanel
 	},
 	{
 		path: BASKET_ROUTE,
