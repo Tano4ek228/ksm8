@@ -1,20 +1,10 @@
-const dropBlock = document.getElementsByClassName('drop_block');
-const buttEdit = document.getElementsByClassName('editButt');
+const buts = document.getElementsByClassName('editButt');
+const blockShow = document.getElementsByClassName('block_show');
 
-// let a = document.querySelector('input .editButt')
-// buttEdit.onclick = () => {
-// 	dropBlock.classList.toggle("drop");
-// }
-
-
-
-// console.log(a);
-// console.log(dropBlock.classList);
-// console.log(buttEdit);
-
-console.log(document.querySelectorAll('input.editButt'));
-
-
-// buttEdit[0].addEventListener("click", () => {
-// 	dropBlock[0].classList.toggle("drop")
-// })
+console.log(blockShow);
+for (let but of buts) {
+	but.addEventListener("click", () => {
+		console.log(blockShow[but]);
+		// blockShow[0].classList.add('top');
+	})
+}
