@@ -8,9 +8,6 @@ import Save from "../pages/images/AdminPanel/save.png"
 
 const TypeBar = observer(() => {
 	const { device } = useContext(Context)
-	device.Types.map(type =>
-		console.log(type.name)
-	)
 	return (
 		<form>
 			{device.Types.map(type =>
