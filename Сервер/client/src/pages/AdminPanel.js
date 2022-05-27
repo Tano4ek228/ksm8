@@ -6,16 +6,14 @@ import TypeBar from "../components/TypeBar";
 
 const AdminPanel = () => {
 	const { device } = useContext(Context)
-	var check = 1;
 	useEffect(() => {
 		fetchType().then(data => device.setTypes(data))
 		fetchDevisec().then((data => device.setDevices(data)))
 		// device.Devices.map(material =>
 		// 	console.log(material.name))
-	}, [check])
+	})
 	const addType = () => {
 		createType({ name: "" }).then(data => { "" })
-		check++
 	}
 	return (
 		<div className="container_main">
