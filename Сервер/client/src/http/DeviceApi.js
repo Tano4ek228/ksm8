@@ -18,3 +18,11 @@ export const fetchType = async () => {
 	const {data} = await $host.get('api/type')
 	return data; 
 }
+export const deleteType = async (type) =>{
+	const {data} = await $host.post('api/type/delete',type)
+	return data;
+}
+export const updateType = async (type) =>{
+	const {data} = await $host.post('api/type/update',type)
+	return data;
+}

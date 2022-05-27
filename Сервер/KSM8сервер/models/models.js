@@ -15,9 +15,9 @@ const BasketMaterial = sequelize.define('basket_material', {
 })
 const Material = sequelize.define('material', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    name: { type: DataTypes.STRING, unique: true, allowNull: false },
-    price: { type: DataTypes.INTEGER, allowNull: false },
-    img: { type: DataTypes.STRING, allowNull: false }
+    name: { type: DataTypes.STRING, unique: true, allowNull: true },
+    price: { type: DataTypes.INTEGER, allowNull: true },
+    img: { type: DataTypes.STRING, allowNull: true }
 })
 const MaterialInfo = sequelize.define('material_info', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -26,7 +26,7 @@ const MaterialInfo = sequelize.define('material_info', {
 })
 const Type = sequelize.define('type', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    name: { type: DataTypes.STRING, unique: true, allowNull: false },
+    name: { type: DataTypes.STRING, unique: true, allowNull: true},
 })
 User.hasOne(Basket)
 Basket.belongsTo(User)
