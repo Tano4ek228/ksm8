@@ -33,7 +33,12 @@ export const publicRoutes = [
 	{
 		path: ADMIN_PANEL_ROUTE,
 		Component: AdminPanel
+	},
+	{
+		path: BASKET_ROUTE,
+		Component: Basket
 	}
+
 ]
 
 export const authRouters = [
