@@ -5,6 +5,5 @@ const checkRole = require('../middleware/checkRoleMiddleware')
 
 router.post('/', checkRole('ADMIN'), materialController.create)
 router.get('/', materialController.getAll)
-router.get('/:id', materialController.getOne)
 
 module.exports = router
