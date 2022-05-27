@@ -17,6 +17,7 @@ const AdminPanel = () => {
 				<div>
 					<div className="blocks">
 						<TypeBar />
+
 					</div>
 				</div>
 			</div>
