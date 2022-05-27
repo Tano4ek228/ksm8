@@ -8,16 +8,14 @@ import Save from "../pages/images/AdminPanel/save.png"
 
 const TypeBar = observer(() => {
 	const { device } = useContext(Context)
-	device.Types.map(type =>
-		console.log(type.name)
-	)
+	
 	return (
 		<form>
 			{device.Types.map(type =>
-				<div className="block">
+				<div className="block" key={type.id}>
 					<div className="tovar_value">
 						<img className="tovar_icon" src={TovarFone} alt=""></img>
-						<input type="text" key={type.id} onChange value={type.name}></input>
+						<input type="text"  value={type.name}></input>
 					</div>
 					<div className="btn_block">
 						<img className="editButt" src={Edit} alt=""
