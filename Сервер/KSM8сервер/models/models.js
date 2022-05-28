@@ -17,12 +17,7 @@ const Material = sequelize.define('material', {
 	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 	name: { type: DataTypes.STRING, unique: true, allowNull: true },
 	price: { type: DataTypes.INTEGER, allowNull: true },
-	img: { type: DataTypes.STRING, allowNull: true }
-})
-const MaterialInfo = sequelize.define('material_info', {
-	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-	title: { type: DataTypes.STRING, allowNull: false },
-	description: { type: DataTypes.STRING, allowNull: false }
+	qant: { type: DataTypes.INTEGER }
 })
 const Type = sequelize.define('type', {
 	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -40,14 +35,11 @@ BasketMaterial.belongsTo(Material)
 Type.hasMany(Material)
 Material.belongsTo(Type)
 
-Material.hasMany(MaterialInfo, { as: 'info' })
-MaterialInfo.belongsTo(Material)
 
 module.exports = {
 	User,
 	Basket,
 	BasketMaterial,
 	Material,
-	MaterialInfo,
 	Type
 }

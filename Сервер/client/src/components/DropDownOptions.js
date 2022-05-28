@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useContext} from "react";
 import { observer } from "mobx-react-lite";
-import DropDownLine from "./DropDownLine";
+import { Context } from "..";
 
 const DropDownOptions = observer(() => {
+	const {device} = useContext(Context)
 	return (
 		<div className="container_main">
 			<div className="main_text">
-				<div className="text_inst">
-					<h2>Инструменты</h2>
-					<button className="buttonAdd">Добавить</button>
-				</div>
-
 				<div>
 					<div className="Panel_block">
 						<div className="Panel_text_line">
@@ -19,8 +15,9 @@ const DropDownOptions = observer(() => {
 							<h2>НДС</h2>
 							<h2>На складе</h2>
 						</div>
-
-						<DropDownLine></DropDownLine>
+						{/* {device.device.map(type => */}
+							{/* <DropDownLine></DropDownLine> */}
+						 {/* )} */}
 
 						<div className="btn_add_tovar">
 							<button className="buttonAddTovar buttonAdd">Добавить новое поле</button>

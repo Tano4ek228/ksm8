@@ -9,6 +9,11 @@ export const fetchDevisec = async () => {
 	const {data} = await $host.get('api/material')
 	return data; 
 }
+export const AllTypeDevices = async (id) =>{
+	const {data} = await $host.get('api/material',id)
+	return data;
+}
+
 export const createType = async (type) => {
 	const {data} = await $host.post('api/type', type)
 	return data;
