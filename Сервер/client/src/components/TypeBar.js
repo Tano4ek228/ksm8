@@ -10,14 +10,14 @@ import { deleteType, updateType } from "../http/DeviceApi";
 
 const TypeBar = observer(() => {
 	const { device } = useContext(Context)
-	const [value,setValue] = useState('')
-	const typeUpdate = (id) =>{
-		updateType({name:value,id})
-		console.log({value,id})
+	const [value, setValue] = useState('')
+	const typeUpdate = (id) => {
+		updateType({ name: value, id })
+		console.log({ value, id })
 		console.log('Успешное обновление')
 	}
-	const typeDelete = (id) =>{
-		deleteType({id})
+	const typeDelete = (id) => {
+		deleteType({ id })
 	}
 	return (
 		<form >
@@ -25,8 +25,8 @@ const TypeBar = observer(() => {
 				<div className="block" id={type.id} key={type.id}>
 					<div className="tovar_value">
 						<img className="tovar_icon" src={TovarFone} alt=""></img>
-						<input type="text" placeholder={type.name}  
-						onChange={e => setValue(e.target.value)}
+						<input type="text" placeholder={type.name}
+							onChange={e => setValue(e.target.value)}
 						></input>
 					</div>
 					<div className="btn_block">
@@ -36,11 +36,11 @@ const TypeBar = observer(() => {
 						></img>
 
 						<img src={Save} alt=""
-						onClick={()=>typeUpdate(type.id)}
+							onClick={() => typeUpdate(type.id)}
 						></img>
 
 						<img src={Del} alt=""
-						onClick={() => typeDelete(type.id)}
+							onClick={() => typeDelete(type.id)}
 						></img>
 
 					</div>
