@@ -19,9 +19,11 @@ const TypeBar = observer(() => {
 	const typeUpdate = (id) => {
 		updateType({ name: value, id })
 		console.log('Успешное обновление')
+		window.location.reload()
 	}
 	const typeDelete = (id) => {
 		deleteType({ id })
+		window.location.reload()
 	}
 
 	const OnAddDown = (typeId) => {

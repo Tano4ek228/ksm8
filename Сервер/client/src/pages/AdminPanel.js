@@ -17,6 +17,7 @@ const AdminPanel = () => {
 	},[])
 	const addType = () => {
 		createType({ name: "" }).then(data => { "" })
+		window.location.reload()
 	}
 	return (
 		<div className="container_main">
