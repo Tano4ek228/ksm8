@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { createAppl } from "../http/DeviceApi";
+import Zayavka from "../components/zayavka/Zayavka";
+// import { createAppl } from "../http/DeviceApi";
 
 
 const Main = () => {
@@ -21,135 +22,122 @@ const Main = () => {
 			</div>
 		);
 	};
-	const [name,setValue] = useState('')
-	const [namber,setNamber] = useState('')
-	const addAppl = () => {
-		if (!name && !namber) alert('Вы не ввели имя и телефон!')
-		else 
-		if (!name) alert('Вы не ввели имя')
-		else
-		if (!namber) alert ('Вы не ввели номер телефона')
-		else{
-		createAppl({ name: name, number: namber })
-		alert('Заявка успешно создана')
-		}
-	}
 
 	return (
 		<div className="all">
 		{/* Слайдер */}
 		<div className="headnone slider">
 
-{/* Товарный бетон */}
-<div className="G_text_header slider__item">
-	<div className="G_text">
-		<h1>Товарный бетон</h1>
-	</div>
-	<div className="g2_text">
-		<p>
-			ООО «КСМ-8» производит товарный бетон и раствор от М-100 до М-400. Осуществляет доставку
-			бетона в
-			Ростове-на-Дону и по Ростовской области (Батайск, Азов, Аксай, Новочеркасск, Зерноград и
-			прочие).
-		</p>
-	</div>
+		{/* Товарный бетон */}
+		<div className="G_text_header slider__item">
+			<div className="G_text">
+				<h1>Товарный бетон</h1>
+			</div>
+			<div className="g2_text">
+				<p>
+					ООО «КСМ-8» производит товарный бетон и раствор от М-100 до М-400. Осуществляет доставку
+					бетона в
+					Ростове-на-Дону и по Ростовской области (Батайск, Азов, Аксай, Новочеркасск, Зерноград и
+					прочие).
+				</p>
+			</div>
 
-	<div className="btns">
-		<div className="btn_zakaz">
-			<a href="#">Заказать</a>
+			<div className="btns">
+				<div className="btn_zakaz">
+					<a href="#">Заказать</a>
+				</div>
+				<div className="btn_podrobno">
+					<a href="/beton">Подробнее</a>
+				</div>
+			</div>
 		</div>
-		<div className="btn_podrobno">
-			<a href="/beton">Подробнее</a>
-		</div>
-	</div>
-</div>
 
-{/* Керамзитобетон и керамзит */}
-<div className="G_text_header slider__item">
-	<div className="G_text">
-		<h1>Керамзитобетон и керамзит</h1>
-	</div>
-	<div className="g2_text">
-		<p>
-			Теперь, в нашей компании, вы можете купить <br></br> керамзитобетон и керамзит разных фракций и марок.
-		</p>
-	</div>
+		{/* Керамзитобетон и керамзит */}
+		<div className="G_text_header slider__item">
+			<div className="G_text">
+				<h1>Керамзитобетон и керамзит</h1>
+			</div>
+			<div className="g2_text">
+				<p>
+					Теперь, в нашей компании, вы можете купить <br></br> керамзитобетон и керамзит разных фракций и марок.
+				</p>
+			</div>
 
-	<div className="btns">
-		<div className="btn_zakaz">
-			<a href="#">Заказать</a>
+			<div className="btns">
+				<div className="btn_zakaz">
+					<a href="#">Заказать</a>
+				</div>
+				<div className="btn_podrobno">
+					<a href="/keramzitobeton">Подробнее</a>
+				</div>
+			</div>
 		</div>
-		<div className="btn_podrobno">
-			<a href="/keramzitobeton">Подробнее</a>
-		</div>
-	</div>
-</div>
 
-{/* Автобетононасос */}
-<div className="G_text_header slider__item">
-	<div className="G_text">
-		<h1>Услуги автобетононасоса</h1>
-	</div>
-	<div className="g2_text">
-		<p>
-			Предлагаем услугу: <a href="/autopump" className="black_text">аренда автобетононасоса в Ростове-на-Дону</a><br></br> и области. 
-			В нашей компании свой автопарк автобетононасосов <br></br> высотой подачи от 20 до 52 метров. 
-		</p>
-	</div>
+		{/* Автобетононасос */}
+		<div className="G_text_header slider__item">
+			<div className="G_text">
+				<h1>Услуги автобетононасоса</h1>
+			</div>
+			<div className="g2_text">
+				<p>
+					Предлагаем услугу: <a href="/autopump" className="black_text">аренда автобетононасоса в Ростове-на-Дону</a><br></br> и области. 
+					В нашей компании свой автопарк автобетононасосов <br></br> высотой подачи от 20 до 52 метров. 
+				</p>
+			</div>
 
-	<div className="btns">
-		<div className="btn_zakaz">
-			<a href="#">Заказать</a>
+			<div className="btns">
+				<div className="btn_zakaz">
+					<a href="#">Заказать</a>
+				</div>
+				<div className="btn_podrobno">
+					<a href="/autopump">Подробнее</a>
+				</div>
+			</div>
 		</div>
-		<div className="btn_podrobno">
-			<a href="/autopump">Подробнее</a>
-		</div>
-	</div>
-</div>
 
-{/* ФБС */}
-<div className="G_text_header slider__item">
-	<div className="G_text">
-		<h1>Фундаментные блоки-ФБС</h1>
-	</div>
-	<div className="g2_text">
-		<p>
-			ООО «КСМ-8» производит фундаментные блоки различных размеров. Доставку фундаментных блоков осуществляем по Ростову на Дону в все города Ростовской области такие как Батайск, Азов, Таганрог, Аксай, Егорлык, Кагальницкое и т.д.
-		</p>
-	</div>
+		{/* ФБС */}
+		<div className="G_text_header slider__item">
+			<div className="G_text">
+				<h1>Фундаментные блоки-ФБС</h1>
+			</div>
+			<div className="g2_text">
+				<p>
+					ООО «КСМ-8» производит фундаментные блоки различных размеров. Доставку фундаментных блоков осуществляем по Ростову на Дону в все города Ростовской области такие как Батайск, Азов, Таганрог, Аксай, Егорлык, Кагальницкое и т.д.
+				</p>
+			</div>
 
-	<div className="btns">
-		<div className="btn_zakaz">
-			<a href="#">Заказать</a>
+			<div className="btns">
+				<div className="btn_zakaz">
+					<a href="#">Заказать</a>
+				</div>
+				<div className="btn_podrobno">
+					<a href="/fbs_blocks">Подробнее</a>
+				</div>
+			</div>
 		</div>
-		<div className="btn_podrobno">
-			<a href="/fbs_blocks">Подробнее</a>
-		</div>
-	</div>
-</div>
 
-{/* Производство на Новороссийском цементе */}
-<div className="G_text_header slider__item">
-	<div className="G_Nov_text">
-		<h1>Производство на Новороссийском цементе</h1>
-	</div>
-	<div className="g2_text">
-		<p>
-			Производство бетона осуществляется исключительно на Новороссийском портланд цементе M—500 сульфатостойкий, поставляемый напрямую заводом производителем транспортной компанией «ЮТК».
-		</p>
-	</div>
+		{/* Производство на Новороссийском цементе */}
+		<div className="G_text_header slider__item">
+			<div className="G_Nov_text">
+				<h1>Производство на Новороссийском цементе</h1>
+			</div>
+			<div className="g2_text">
+				<p>
+					Производство бетона осуществляется исключительно на Новороссийском портланд цементе M—500 сульфатостойкий, поставляемый напрямую заводом производителем транспортной компанией «ЮТК».
+				</p>
+			</div>
 
-	<div className="btns_Nov">
-		<div className="btn_zakaz">
-			<a href="#">Заказать</a>
+			<div className="btns_Nov">
+				<div className="btn_zakaz">
+					<a href="#">Заказать</a>
+				</div>
+				<div className="btn_podrobno">
+					<a href="/beton">Подробнее</a>
+				</div>
+			</div>
 		</div>
-		<div className="btn_podrobno">
-			<a href="/beton">Подробнее</a>
-		</div>
-	</div>
-</div>
 
-</div>
+		</div>
 			<div className="tovar">
 				<div className="tovar_line">
 					{elements}
@@ -243,34 +231,7 @@ const Main = () => {
 					</div>
 
 				</div>
-
-				{/* Заявка */}
-				<div className="zayavka_block">
-					<div className="text_zayavka">
-						<p>Есть вопросы?</p>
-						<p>Оставьте заявку, и мы перезвоним Вам что бы ответить на все Ваши вопросы.</p>
-					</div>
-
-					<div className="zayavka_fone">
-						<form >
-							<div className="zayavka">
-								<h2>Оставьте заявку:</h2>
-								<div className="input_zayavka">
-									<input type="text" name="name" className="name" 
-									value={name} onChange={e=> setValue(e.target.value)} placeholder="Имя:"></input>
-									<input type="text" name="tel" className="tel"
-									value={namber} onChange={e=> setNamber(e.target.value)} placeholder="Телефон: +7"></input>
-								</div>
-								<div className="btn_zayavka">
-									<input name="btn_zayavka" onClick={()=>addAppl()}
-									className="ostavit_zayavk" defaultValue="Оставить заявку">
-									</input>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-
+				<Zayavka/>
 			</div>
 		</div>
 
