@@ -1,0 +1,74 @@
+.modal {
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.modal_content {
+	height: 152px;
+	width: 600px;
+	background-color: rgba(255, 255, 255);
+	border-radius: 10px;
+	margin-top: 20px;
+	transform: scale(0.5);
+	transition: 0.4s;
+}
+
+.modal_content.active{
+	transform: scale(1);
+}
+
+.modal_content>img {
+	height: 25px;
+	width: 25px;
+	margin: 10px 10px;
+	position: relative;
+	left: 550px;
+	border-radius: 10px;
+	background-color: #f15249;
+	transition: 0.4s;
+}
+
+.modal_content>p {
+	font-size: 24px;
+	text-align: center;
+}
+
+.btn_modal {
+	color: #252525;
+	font-size: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #FDF7F5;
+	padding: 4px 34px;
+	margin: 15px 20px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #252525;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	transition: 0.4s;
+	cursor: pointer;
+	float: right;
+}
+
+.btn_modal:hover {
+	background-color: #252525;
+	color: #FDF7F5;
+}
+
+.modal_content>img:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}

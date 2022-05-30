@@ -2,8 +2,9 @@ import React from "react";
 
 const Main = () => {
 	let elements = [];
-	let nameShop = ["Beton", "Fbs", "JBI", "Sheben"];
+	let nameShop = ["Beton", "Fbs", "JBI", "KeramzitB"];
 	let nameTovar = ["Бетон", "ФБС", "Кольца стеновые", "Керамзитобетон"];
+	let nameLink = ["/beton", "/fbs_blocks", "/jbi_koltsa", "/keramzitobeton"];
 	for (let i = 0; i < nameShop.length; i++) {
 		elements.push(
 			<div class="products line_right line_bottom">
@@ -13,7 +14,7 @@ const Main = () => {
 					Производство и доставка высококачественного товарного бетона и раствора всех марок.
 				</h3>
 				<div class="btn_wh">
-					<a href="#">Подробнее</a>
+					<a href={nameLink[i]}>Подробнее</a>
 				</div>
 			</div>
 		);

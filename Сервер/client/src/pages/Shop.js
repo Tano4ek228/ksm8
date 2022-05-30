@@ -2,7 +2,7 @@ import React from "react";
 
 const Shop = () => {
 	let elements = [];
-	let nameShop = ["Beton", "Fbs", "JBI", "Sheben"];
+	let nameShop = ["Beton", "Fbs", "JBI", "KeramzitB"];
 	let nameTovar = ["Бетон", "ФБС", "Кольца стеновые", "Керамзитобетон"];
 	for (let i = 0; i < nameShop.length; i++) {
 		elements.push(

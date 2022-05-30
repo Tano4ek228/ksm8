@@ -6,16 +6,23 @@
 	margin-bottom: 30px;
 }
 
+.main_text>.h1Tovarname{
+	margin-bottom: 10px;
+}
+
 .ShiftRight {
 	margin-left: 20px;
 }
 
-/* .main_text>.ShiftLeft {
+.main_text>.h1_tovar_name{
+	padding-bottom: 10px;
+	border-bottom: 3px solid #BCBCBC;
+	margin-top: 50px;
+	padding-left: 40px;
 	text-align: left;
-	margin-bottom: 5px;
-} */
+}
 
-.advantages_beton>li {
+.advantages_tovar>li {
 	margin-bottom: 10px;
 }
 

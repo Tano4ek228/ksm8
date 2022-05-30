@@ -1,13 +1,12 @@
 import React from "react";
 import imgbeton from './images/beton/beton.jpg';
-import './style/style_beton.css';
-
+import './style/style_tovar_inf.css';
 
 const Beton = () => {
 	return (
 		<div class="container_main">
 			<div class="main_text">
-				<h1 className="ShiftLeft">Товарный бетон</h1>
+				<h1 className="ShiftLeft h1_tovar_name">Товарный бетон</h1>
 				<p style={{ textAlign: "center" }}>
 					<img src={imgbeton}></img>
 				</p>
@@ -26,7 +25,7 @@ const Beton = () => {
 				<p>
 					Вся выпускаемая продукция компании ООО «КСМ-8» проходит сертификацию и имеет все необходимые документы.
 				</p>
-				<h1>Бетон товарный:</h1>
+				<h1 className="h1Tovarname">Бетон товарный:</h1>
 
 				<div className="beton_info">
 
@@ -60,7 +59,7 @@ const Beton = () => {
 				</p>
 				<div class="advantages_bg">
 					<h2 class="preimushestva">Преимущества товарного бетона от «КСМ-8»</h2>
-					<ul class="advantages advantages_beton">
+					<ul class="advantages advantages_tovar">
 						<li>В производстве применяются только качественные материалы и компоненты, которые прошли входной контроль на базе собственной сертифицированной лаборатории.</li>
 						<li>В штате компании работают исключительно профессионалы своего дела, которые имеют огромный опыт в производстве строительных материалов, смесей и прочих химических компонентов применяемых при производстве цементных смесей.</li>
 						<li>Отзывчивые  менеджеры всегда готовы прийти на помощь и помочь в выборе марки и сорта бетона при необходимости найти альтернативный вариант сотрудничества и просто  ответить на все вопросы, связанные со строительством.</li>
