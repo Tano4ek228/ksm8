@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { Context } from "../index";
+import AdminPanel from "../pages/AdminPanel";
 import Main from "../pages/Main";
 import { authRouters, publicRoutes } from "../routes";
 

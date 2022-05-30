@@ -9,7 +9,7 @@ import Jbi from "./pages/JBI"
 import Keramzitobeton from "./pages/Keramzitobeton"
 import AutoPump from "./pages/AutoPump"
 import {
-	ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE,
+	 LOGIN_ROUTE, REGISTRATION_ROUTE,
 	SHOP_ROUTE, BASKET_ROUTE, MAIN_ROUTE, ADMIN_PANEL_ROUTE,
 	BETON_ROUTE, FBS_ROUTE, JBI_ROUTE, KERAMZITOBETON_ROUTE,
 	AUTOBETONONASOS_ROUTE
@@ -41,17 +41,6 @@ export const publicRoutes = [
 		path: BASKET_ROUTE,
 		Component: Basket
 	},
-]
-
-export const authRouters = [
-	{
-		path: ADMIN_PANEL_ROUTE,
-		Component: AdminPanel
-	},
-	{
-		path: BASKET_ROUTE,
-		Component: Basket
-	},
 	{
 		path: FBS_ROUTE,
 		Component: Fbs
@@ -67,5 +56,16 @@ export const authRouters = [
 	{
 		path: AUTOBETONONASOS_ROUTE,
 		Component: AutoPump
+	}
+]
+
+export const authRouters = [
+	{
+		path: ADMIN_PANEL_ROUTE,
+		Component: AdminPanel
+	},
+	{
+		path: BASKET_ROUTE,
+		Component: Basket
 	}
 ]
