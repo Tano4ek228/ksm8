@@ -31,3 +31,7 @@ export const updateType = async (type) =>{
 	const {data} = await $host.post('api/type/update',type)
 	return data;
 }
+export const createAppl = async (date) =>{
+	const {data} = await $host.post('api/application',date)
+	return data;
+}

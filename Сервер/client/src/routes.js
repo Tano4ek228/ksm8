@@ -36,6 +36,14 @@ export const publicRoutes = [
 		path: BETON_ROUTE,
 		Component: Beton
 	},
+	
+	{
+		path: BASKET_ROUTE,
+		Component: Basket
+	},
+]
+
+export const authRouters = [
 	{
 		path: ADMIN_PANEL_ROUTE,
 		Component: AdminPanel
@@ -59,17 +67,5 @@ export const publicRoutes = [
 	{
 		path: AUTOBETONONASOS_ROUTE,
 		Component: AutoPump
-	}
-
-]
-
-export const authRouters = [
-	{
-		path: ADMIN_ROUTE,
-		Component: AdminPanel
-	},
-	{
-		path: BASKET_ROUTE,
-		Component: Basket
 	}
 ]
