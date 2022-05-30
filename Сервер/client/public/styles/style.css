@@ -26,6 +26,7 @@ a {
 
 .header {
 	background: url(../images/fon-header1.jpg) no-repeat center top / cover;
+	/* background-color: rgb(255, 255, 255); */
 }
 
 .header-container {
@@ -230,7 +231,8 @@ a {
 /*________________________________Текст слайдера_______________________________*/
 
 .headnone {
-	display: none;
+	display: block;
+	background: url(../images/fon-slider.jpg) no-repeat center top / cover;
 }
 
 /* Отступы главного текста шапки */

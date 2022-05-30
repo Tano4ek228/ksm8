@@ -1,21 +1,19 @@
 const url = new URL(document.location);
 let footer = document.querySelector('footer');
-const urlH = new URL(document.location);
-let headertext = document.querySelector('.headnone');
+// let headertext = document.querySelector('.headnone');
 // let head = document.querySelector('.header');
 
-console.log(headertext);
-
+// console.log(headertext);
 
 function fnone(url, footer) {
 	if (url.pathname === "/login" || url.pathname === '/registration')
 		return footer.style.display = 'none';
 }
-function hnone(urlH, headertext) {
-	if (urlH.pathname === "/")
-		return headertext.style.display = 'block';
-}
 
+// function hnone(url, headertext) {
+// 	if (url.pathname === "/")
+// 		return headertext.style.display = 'block';
+// }
 
 // function head_line_bg(url, head){
 // 	if (url.pathname === "/")
@@ -24,6 +22,6 @@ function hnone(urlH, headertext) {
 
 fnone(url, footer);
 
-hnone(urlH, headertext);
+// hnone(url, headertext);
 
 // head_line_bg(url, head);
