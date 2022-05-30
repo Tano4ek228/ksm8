@@ -1,6 +1,16 @@
-import React from "react";
+import { observer } from "mobx-react-lite";
+import React, { useContext } from "react";
+import { Context } from "../index";
 
-const Header = () => {
+
+const Header = observer(() => {
+	const {user} = useContext(Context)
+
+	const logOut = () =>{
+		user.setUser({})
+		user.setIsAuth(false)
+		localStorage.clear()
+	}
 	return (
 	<header id="header" className="header">
 		<div className="header-container">
@@ -25,21 +35,27 @@ const Header = () => {
 					</li>
 					<li><a href="#">Прайс</a></li>
 					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a onClick={()=>console.log(user.isAuth)}>Контакты</a></li>
 					<li><a href="/admin_panel">Телефон</a></li>
 				</ul>
-
-				<a className="button_sign_in" href="/login">Войти</a>
-
-				<a className="header-cart" href="#">
+				{user.isAuth==false ?
+				(<a className="button_sign_in" href="/login">Войти</a>)
+				:(
+				<div>
+				<a className="button_sign_in" href="/" onClick={()=>logOut()}>Выйти</a>
+				<a className="button_sign_in" href="/" >Панель администратора</a>
+				</div>
+				)
+				}
+				{/* <a className="header-cart" href="#">
 					<img src="images/Корзина.svg" width="65"></img>
-				</a>
+				</a> */}
 			</div>
 		</div>
 
 			
 	</header>
 	)
-}
+})
 
 export default Header;

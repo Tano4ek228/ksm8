@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
@@ -8,6 +8,7 @@ import { login, registration } from "../http/userAPI";
 import "./style/style_login.css";
 import { observer } from "mobx-react-lite";
 import Modal from "../components/modal_window/Modal";
+import { Context } from "..";
 
 let error;
 
@@ -18,6 +19,7 @@ const isLogin = location.pathname === LOGIN_ROUTE;
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [modalActive, setModalActive] = useState(false);
+const {user} = useContext(Context)
 
 
   const click = async () => {
@@ -28,6 +30,9 @@ const [modalActive, setModalActive] = useState(false);
 		// alert("Вы успешно авторизовались");
 		setModalActive(true);
 		error = "Вы успешно авторизовались";
+		user.setIsAuth(true)
+		user.setUser(data)
+		
 		navigate("/");
 	  } else {
 		data = await registration(email, password);
