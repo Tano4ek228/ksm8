@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap"
 import Row from "react-bootstrap/Row"
 import Card from "react-bootstrap/Card"
@@ -7,8 +7,10 @@ import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/const"
 import { login, registration } from "../http/userAPI"
 import './style/style_login.css';
 import { observer } from "mobx-react-lite"
+import { Context } from "..";
 
 const Auth = observer(() => {
+	const {user} = useContext(Context)
 	const location = useLocation()
 	const navigate = useNavigate()
 	const isLogin = location.pathname === LOGIN_ROUTE
@@ -27,6 +29,10 @@ const Auth = observer(() => {
 				data = await registration(email, password)
 				navigate("/login")
 			}
+			user.setIsAuth(true)
+			user.setUser(data)
+			console.log(user.isAuth)
+			console.log(user.user)
 		}
 
 		catch (e) {

@@ -23,6 +23,11 @@ const Type = sequelize.define('type', {
 	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 	name: { type: DataTypes.STRING, allowNull: true },
 })
+const Application = sequelize.define('application',{
+	id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+	name: {type: DataTypes.STRING, allowNull:true},
+	number: {type: DataTypes.STRING, allowNull:true}
+})
 User.hasOne(Basket)
 Basket.belongsTo(User)
 
@@ -41,5 +46,6 @@ module.exports = {
 	Basket,
 	BasketMaterial,
 	Material,
-	Type
+	Type,
+	Application
 }

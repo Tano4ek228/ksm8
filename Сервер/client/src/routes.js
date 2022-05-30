@@ -5,7 +5,7 @@ import Basket from "./pages/Basket"
 import Beton from "./pages/Beton"
 import AdminPanel from "./pages/AdminPanel"
 import {
-	ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE,
+	LOGIN_ROUTE, REGISTRATION_ROUTE,
 	SHOP_ROUTE, BASKET_ROUTE, MAIN_ROUTE, BETON_ROUTE, ADMIN_PANEL_ROUTE
 } from "./utils/const"
 
@@ -30,20 +30,16 @@ export const publicRoutes = [
 		path: BETON_ROUTE,
 		Component: Beton
 	},
-	{
-		path: ADMIN_PANEL_ROUTE,
-		Component: AdminPanel
-	},
+	
 	{
 		path: BASKET_ROUTE,
 		Component: Basket
-	}
-
+	},
 ]
 
 export const authRouters = [
 	{
-		path: ADMIN_ROUTE,
+		path: ADMIN_PANEL_ROUTE,
 		Component: AdminPanel
 	},
 	{

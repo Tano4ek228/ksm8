@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { Context } from "../index";
+import Main from "../pages/Main";
 import { authRouters, publicRoutes } from "../routes";
 
 const AppRouter = () => {
 	const { user } = useContext(Context)
 	return (
 		<Routes>
-			{user.isAuth && authRouters.map(({ path, Component }) =>
+			{user.isAuth || authRouters.map(({ path, Component }) =>
 				<Route key={path} path={path} element={<Component />}
 
 
@@ -18,9 +19,7 @@ const AppRouter = () => {
 			)}
 			<Route
 				path="*"
-				element={
-					<p>Нет совпадения</p>
-				}
+				element={<Main/>}
 			/>
 		</Routes>
 	)
