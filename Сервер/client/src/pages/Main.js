@@ -44,7 +44,7 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="#">Заказать</a>
+					<a href="/delivery">Заказать</a>
 				</div>
 				<div className="btn_podrobno">
 					<a href="/beton">Подробнее</a>
@@ -65,7 +65,7 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="#">Заказать</a>
+					<a href="/delivery">Заказать</a>
 				</div>
 				<div className="btn_podrobno">
 					<a href="/keramzitobeton">Подробнее</a>
@@ -87,7 +87,7 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="#">Заказать</a>
+					<a href="/delivery">Заказать</a>
 				</div>
 				<div className="btn_podrobno">
 					<a href="/autopump">Подробнее</a>
@@ -108,7 +108,7 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="#">Заказать</a>
+					<a href="/delivery">Заказать</a>
 				</div>
 				<div className="btn_podrobno">
 					<a href="/fbs_blocks">Подробнее</a>
@@ -129,7 +129,7 @@ const Main = () => {
 
 			<div className="btns_Nov">
 				<div className="btn_zakaz">
-					<a href="#">Заказать</a>
+					<a href="/delivery">Заказать</a>
 				</div>
 				<div className="btn_podrobno">
 					<a href="/beton">Подробнее</a>
@@ -223,7 +223,7 @@ const Main = () => {
 								</a>
 							</div>
 							<div>
-								<a href="/">
+								<a href="http://edinst.ru/">
 									<img src="images/partners/edinstvo.jpg" alt=""></img>
 								</a>
 							</div>
