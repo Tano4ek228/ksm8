@@ -1,18 +1,32 @@
 import React, { useState } from 'react'
 import { createAppl } from '../../http/DeviceApi'
+import Modal from "../modal_window/Modal.jsx";
 
+let error;
 
 const Zayavka = () => {
 	const [name, setValue] = useState("")
 	const [namber, setNamber] = useState("")
+	const [modalActive, setModalActive] = useState(false);
 	const addAppl = () => {
-    if (!name && !namber) alert("Вы не ввели имя и телефон!");
-    else if (!name) alert("Вы не ввели имя");
-    else if (!namber) alert("Вы не ввели номер телефона");
+    if (!name && !namber) {
+		setModalActive(true);
+		error="Вы не ввели имя и телефон!";
+	}
+    else if (!name){
+		setModalActive(true);
+		error="Вы не ввели имя";
+	}
+    else if (!namber){
+		setModalActive(true);
+		error="Вы не ввели номер телефона";
+	}
     else {
         createAppl({ name: name, number: namber });
-        alert("Заявка успешно создана");
+		setModalActive(true);
+        error="Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.";
     }
+	
 };
     return (
         <div className="zayavka_block">
@@ -48,6 +62,7 @@ const Zayavka = () => {
                         </div>
                         <div className="btn_zayavka">
                             <input
+								type='button'
                                 name="btn_zayavka"
                                 onClick={() => addAppl()}
                                 className="ostavit_zayavk"
@@ -57,6 +72,9 @@ const Zayavka = () => {
                     </div>
                 </form>
             </div>
+			<Modal active={modalActive} setActive={setModalActive}>
+			<p>{error}</p>
+	  		</Modal>
         </div>
     )
 }

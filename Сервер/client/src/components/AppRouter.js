@@ -9,7 +9,8 @@ const AppRouter = observer (() => {
 	const { user } = useContext(Context)
 	return (
 		<Routes>
-			{user.isAuth || authRouters.map(({ path, Component }) =>
+			
+			{user.isAuth && authRouters.map(({ path, Component }) =>
 				<Route key={path} path={path} element={<Component />}
 
 
@@ -20,7 +21,7 @@ const AppRouter = observer (() => {
 			)}
 			<Route
 				path="*"
-				element={<Main/>}
+				element={<div>Нет сопадений</div>}
 			/>
 		</Routes>
 	)

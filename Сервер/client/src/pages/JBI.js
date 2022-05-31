@@ -1,5 +1,6 @@
 import React from "react";
 import jbi_img from "./images/jbi/JBI.jpg"
+import Zayavka from "../components/zayavka/Zayavka";
 
 const JBI = () => {
 	return(
@@ -26,29 +27,8 @@ const JBI = () => {
 				</ul>
 			</div>
 			
-			{/* Заявка */}
-			<div className="zayavka_block">
-				<div className="text_zayavka">
-					<p>Есть вопросы?</p>
-					<p>Оставьте заявку, и мы перезвоним Вам что бы ответить на все Ваши вопросы.</p>
-				</div>
-
-				<div class="zayavka_fone">
-					<form action="">
-						<div class="zayavka">
-							<h2>Оставьте заявку:</h2>
-							<div class="input_zayavka">
-								<input type="text" name="name" class="name" placeholder="Имя:"></input>
-								<input type="text" name="tel" class="tel" placeholder="Телефон: +7"></input>
-							</div>
-							<div class="btn_zayavka">
-								<input type="submit" name="btn_zayavka" class="ostavit_zayavk" value="Оставить заявку">
-								</input>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
+			<Zayavka/>
+			
 		</div>
 	)
 }

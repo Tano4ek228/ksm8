@@ -33,7 +33,7 @@ const {user} = useContext(Context)
 		user.setIsAuth(true)
 		user.setUser(data)
 		
-		navigate("/");
+		navigate("/shop");
 	  } else {
 		data = await registration(email, password);
 		setModalActive(true);

@@ -8,11 +8,12 @@ import Fbs from "./pages/Fbs"
 import Jbi from "./pages/JBI"
 import Keramzitobeton from "./pages/Keramzitobeton"
 import AutoPump from "./pages/AutoPump"
+import LookApplications from "./components/LookApplications"
 import {
-	 LOGIN_ROUTE, REGISTRATION_ROUTE,
+	LOGIN_ROUTE, REGISTRATION_ROUTE,
 	SHOP_ROUTE, BASKET_ROUTE, MAIN_ROUTE, ADMIN_PANEL_ROUTE,
 	BETON_ROUTE, FBS_ROUTE, JBI_ROUTE, KERAMZITOBETON_ROUTE,
-	AUTOBETONONASOS_ROUTE
+	AUTOBETONONASOS_ROUTE,LOOKAPPLICATIONS_ROUTE
 } from "./utils/const"
 
 export const publicRoutes = [
@@ -67,5 +68,13 @@ export const authRouters = [
 	{
 		path: BASKET_ROUTE,
 		Component: Basket
+	},
+	{
+		path: MAIN_ROUTE,
+		Component: Main
+	},
+	{
+		path: LOOKAPPLICATIONS_ROUTE,
+		Component: LookApplications
 	}
 ]

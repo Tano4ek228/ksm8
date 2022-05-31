@@ -1,3 +1,32 @@
+.btn_adm_panel>a{
+	color: #252525;
+	text-decoration: none;
+	font-size: 22px;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #F2B33A;
+	padding: 15px 30px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+	transition: 0.4s;
+}
+
+.btn_adm_panel>a:hover{
+	background-color: #252525;
+	color: #E8E8E8;
+}
+
+.btn_adm_panel{
+	margin-top: 40px;
+}
+
+.btn_adm_panel{
+	margin-right: 20px;
+}
+
+.btn_panLine{
+	display: flex;
+}
+
 .text_inst>h2 {
 	font-size: 34px;
 }
@@ -10,7 +39,7 @@
 	font-size: 23px;
 	font-family: 'Ubuntu', sans-serif;
 	background-color: #FDF7F5;
-	padding: 4px 20px;
+	padding: 10px 20px;
 	margin-right: 40px;
 	border-radius: 10px;
 	border-style: solid;
@@ -37,7 +66,7 @@
 
 .text_inst h2 {
 	padding: 0 20px;
-	border-right: 3px solid rgb(32, 32, 32);
+	border-right: 3px solid #252525;
 }
 
 .blocks {
@@ -182,4 +211,12 @@
 	border: 2px solid #252525;
 	font-size: 25px;
 	color: #252525;
+}
+
+.name_applic{
+	margin-right: 50px;
+}
+
+.applic input{
+	width: 350px;
 }

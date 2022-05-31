@@ -20,7 +20,7 @@ const App = observer(() => {
 
 	return (
 		<BrowserRouter>
-		<Header/>
+			<Header/>
 			<AppRouter/>
 		</BrowserRouter>
 	);

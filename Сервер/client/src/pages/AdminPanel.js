@@ -21,6 +21,16 @@ const AdminPanel = () => {
 	}
 	return (
 		<div className="container_main">
+
+		<div className="btn_panLine">
+			<div className="btn_adm_panel">
+				<a href="/lookapplications">Заявки</a>
+			</div>
+			<div className="btn_adm_panel">
+				<a href="#">Редактирование товаров</a>
+			</div>
+		</div>
+
 			<div className="main_text">
 				<div className="text_inst">
 					<h2>Инструменты</h2>
