@@ -35,7 +35,7 @@ const Header = observer(() => {
 						</ul>
 					</li>
 					<li><a href="#">Прайс</a></li>
-					<li><a href="#">Доставка</a></li>
+					<li><a href="/delivery">Доставка</a></li>
 					<li><a href="#kontaktsFooter">Контакты</a></li>
 				</ul>
 				{user.isAuth==false ?

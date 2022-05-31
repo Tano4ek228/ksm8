@@ -9,11 +9,12 @@ import Jbi from "./pages/JBI"
 import Keramzitobeton from "./pages/Keramzitobeton"
 import AutoPump from "./pages/AutoPump"
 import LookApplications from "./components/LookApplications"
+import Delivery from "./pages/Delivery"
 import {
 	LOGIN_ROUTE, REGISTRATION_ROUTE,
 	SHOP_ROUTE, BASKET_ROUTE, MAIN_ROUTE, ADMIN_PANEL_ROUTE,
 	BETON_ROUTE, FBS_ROUTE, JBI_ROUTE, KERAMZITOBETON_ROUTE,
-	AUTOBETONONASOS_ROUTE,LOOKAPPLICATIONS_ROUTE
+	AUTOBETONONASOS_ROUTE,LOOKAPPLICATIONS_ROUTE,DELIVERY_ROUTE
 } from "./utils/const"
 
 export const publicRoutes = [
@@ -57,6 +58,10 @@ export const publicRoutes = [
 	{
 		path: AUTOBETONONASOS_ROUTE,
 		Component: AutoPump
+	},
+	{
+		path: DELIVERY_ROUTE,
+		Component: Delivery
 	}
 ]
 
