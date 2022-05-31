@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { Context } from "..";
+import { fetchAppl } from "../http/DeviceApi";
 import '../pages/style/style_AdminPanel.css';
-import TypeBar from "../components/TypeBar";
-import Del from "../pages/images/AdminPanel/del.png"
+import Appl from "./Appl"
 
-const lookapplications = () => {
+const Lookapplications = () => {
+	const {device} = useContext(Context)
+	useEffect(()=>{
+		fetchAppl().then(data=>device.setAppls(data))
+
+	},[])
+
 	return (
 		<div className="container_main">
 
@@ -20,24 +27,10 @@ const lookapplications = () => {
 				<div className="text_inst">
 					<h2>Заявки</h2>
 				</div>
-				<div>
-					<div className="blocks">
-					
-						<div className="block">
-							<div className="tovar_value applic">
-								<input className="name_applic" type="text" placeholder='Имя'></input>
-								<input type="text" placeholder='Телефон'></input>
-							</div>
-							<div className="btn_block">
-								<img src={Del} alt=""></img>
-							</div>
-						</div>
-
-					</div>
-				</div>
 			</div>
+			<Appl/>
 		</div>
 	)
 }
 
-export default lookapplications;
+export default Lookapplications;

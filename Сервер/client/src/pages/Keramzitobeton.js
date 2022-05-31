@@ -25,9 +25,9 @@ const Keramzitobeton = () => {
 				<p>
 					В нашем каталоге представлен обширный ассортимент качественных строительных материалов разных фракций и марок. Вы сможете подобрать керамзитобетон и керамзит согласно таким требованиям как плотность, прочность марки, стоимость за 1 м3.
 	 			</p>
-				<div className="beton_info">
+				{/* <div className="beton_info">
 					
-				</div>
+				</div> */}
 				<div class="advantages_bg">
 					<h2 class="preimushestva">Преимущества керамзитобетона</h2>
 					<ul class="advantages advantages_tovar">

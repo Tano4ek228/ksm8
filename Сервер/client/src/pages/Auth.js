@@ -30,8 +30,6 @@ const {user} = useContext(Context)
 		// alert("Вы успешно авторизовались");
 		setModalActive(true);
 		error = "Вы успешно авторизовались";
-		user.setIsAuth(true)
-		user.setUser(data)
 		
 		navigate("/shop");
 	  } else {
@@ -40,6 +38,8 @@ const {user} = useContext(Context)
 		error = "Вы успешно зарегистрировались";
 		navigate("/login");
 	  }
+	  user.setIsAuth(true)
+	  user.setUser(data)
 	} catch (e) {
 	  setModalActive(true);
 	  error = e.response.data.message;

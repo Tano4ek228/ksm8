@@ -35,3 +35,12 @@ export const createAppl = async (date) =>{
 	const {data} = await $host.post('api/application',date)
 	return data;
 }
+export const fetchAppl = async(date) =>{
+	const {data} = await $host.get('api/application',date)
+	return data;
+}
+
+export const deleteAppl = async(date) =>{
+	const {data} = await $host.post('api/application/delete',date)
+	return data;
+}

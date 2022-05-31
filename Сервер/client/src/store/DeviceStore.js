@@ -6,6 +6,7 @@ export default class DeviceStore {
         this._types = []
         this._devices = []
         this._typeDevice = []
+        this._appl=[]
         makeAutoObservable(this)
     }
 
@@ -18,6 +19,9 @@ export default class DeviceStore {
     setTypeDevice(bool){
         this._typeDevice = bool
     }
+    setAppls(bool){
+        this._appl = bool
+    }
     get Types() {   
         return this._types
     }
@@ -26,5 +30,8 @@ export default class DeviceStore {
     }
     get TypeDevice(){
         return this._typeDevice
+    }
+    get Apll() {
+        return this._appl
     }
 }

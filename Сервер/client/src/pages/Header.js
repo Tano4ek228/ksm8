@@ -6,7 +6,6 @@ import { Context } from "../index";
 
 const Header = observer(() => {
 	const {user} = useContext(Context)
-
 	const logOut = () =>{
 		user.setUser({})
 		user.setIsAuth(false)
@@ -44,7 +43,11 @@ const Header = observer(() => {
 				:(
 				<div>
 				<a className="button_sign_in" href="/" onClick={()=>logOut()}>Выйти</a>
-				<a className="button_sign_in" href="/admin_panel">AdminPanel</a>
+				{localStorage.getItem('data')==="ADMIN" ? 
+								<a className="button_sign_in" href="/admin_panel">AdminPanel</a>
+								:
+								<div/>
+				}
 				</div>
 				)
 				}
