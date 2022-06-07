@@ -28,9 +28,9 @@ const Beton = () => {
 				</p>
 				<h1 className="h1Tovarname">Бетон товарный:</h1>
 
-				<div className="beton_info">
+				{/* <div className="beton_info">
 
-				</div>
+				</div> */}
 
 				<h2 className="betonm">Бетон М100</h2>
 				<p className="ShiftRight">

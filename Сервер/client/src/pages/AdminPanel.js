@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import './style/style_AdminPanel.css';
-import { AllTypeDevices, createType, fetchDevisec, fetchType } from "../http/DeviceApi";
+import { AllTypeDevices, createType, fetchAppl, fetchDevisec, fetchType } from "../http/DeviceApi";
 import { Context } from "..";
 import TypeBar from "../components/TypeBar";
 
@@ -10,10 +10,9 @@ const AdminPanel = () => {
 		fetchType().then(data => device.setTypes(data))
 		fetchDevisec().then((data => device.setDevices(data)))
 		AllTypeDevices({id:"1"}).then((data => device.setTypeDevice(data)))
-		{device.TypeDevice.map(type =>
-			console.log(type.name)
-		)}
-	
+		// {device.TypeDevice.map(type =>
+		// 	console.log(type.name)
+		// )}
 	},[])
 	const addType = () => {
 		createType({ name: "" }).then(data => { "" })
