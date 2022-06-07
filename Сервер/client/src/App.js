@@ -5,7 +5,6 @@ import { Context } from "./index";
 import AppRouter from "./components/AppRouter";
 import { check } from "./http/userAPI";
 import Header from "./pages/Header";
-import Zayavka from "./components/zayavka/Zayavka";
 
 const App = observer(() => {
 	const {user} = useContext(Context)

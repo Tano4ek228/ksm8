@@ -25,6 +25,7 @@ const Main = () => {
 
 	return (
 		<div className="all">
+		
 		{/* Слайдер */}
 		<div className="headnone slider">
 
