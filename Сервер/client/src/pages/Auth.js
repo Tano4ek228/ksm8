@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Form, Button, Container, Alert } from "react-bootstrap";
+import { Form, Button, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/const";
+import { LOGIN_ROUTE, REGISTRATION_ROUTE } from "../utils/const";
 import { login, registration } from "../http/userAPI";
 import "./style/style_login.css";
 import { observer } from "mobx-react-lite";
@@ -27,7 +27,6 @@ const {user} = useContext(Context)
 	  let data;
 	  if (isLogin) {
 		data = await login(email, password);
-		// alert("Вы успешно авторизовались");
 		setModalActive(true);
 		error = "Вы успешно авторизовались";
 		

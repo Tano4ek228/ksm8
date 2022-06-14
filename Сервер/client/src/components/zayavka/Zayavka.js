@@ -25,6 +25,8 @@ const Zayavka = () => {
         createAppl({ name: name, number: namber });
 		setModalActive(true);
         error="Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.";
+		setValue('');
+		setNamber('');
     }
 	
 };

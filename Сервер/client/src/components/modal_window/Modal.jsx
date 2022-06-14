@@ -8,7 +8,7 @@ const Modal = ({ active, setActive, children }) => {
 		<div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
 			<div className={active ? "modal_content active" : "modal_content"} onClick={e => e.stopPropagation()} >
 				<img src={exit} onClick={() => setActive(false)} alt=""></img>
-				{children}
+				<p>{children}</p>
 				<button className="btn_modal" onClick={() => setActive(false)}>ОК</button>
 			</div>
 		</div>

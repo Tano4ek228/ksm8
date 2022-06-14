@@ -1,7 +1,8 @@
 import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import { Context } from "../index";
+import { DELIVERY_ROUTE } from "../utils/const";
 
 
 const Header = observer(() => {
@@ -18,7 +19,7 @@ const Header = observer(() => {
 
 			<div className="header-line">
 				<a className="logo" href="/">
-					<img src="images/header-logo.jpg" width="175px" height="50px"></img>
+					<img src="images/header-logo.jpg" width="175px" height="50px" alt=""></img>
 				</a>
 
 				<ul className="header-menu">
@@ -35,10 +36,10 @@ const Header = observer(() => {
 						</ul>
 					</li>
 					{/* <li><a href="#">Прайс</a></li> */}
-					<li><a href="/delivery">Доставка</a></li>
+					<li><NavLink to={DELIVERY_ROUTE}>Доставка</NavLink></li>
 					<li><a href="#kontaktsFooter">Контакты</a></li>
 				</ul>
-				{user.isAuth==false ?
+				{user.isAuth === false ?
 				(<a className="button_sign_in" href="/login">Войти</a>)
 				:(
 				<div>
@@ -55,6 +56,8 @@ const Header = observer(() => {
 					<img src="images/Корзина.svg" width="65"></img>
 				</a> */}
 			</div>
+				
+
 		</div>
 
 			
