@@ -1,7 +1,5 @@
 const { Material, MaterialInfo } = require('../models/models')
 const ApiError = require('../error/ApiError');
-const uuid = require('uuid')
-const path = require('path');
 const { nextTick } = require('process');
 
 class materialController {

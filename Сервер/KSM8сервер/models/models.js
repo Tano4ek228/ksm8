@@ -7,12 +7,6 @@ const User = sequelize.define('user', {
 	password: { type: DataTypes.STRING },
 	role: { type: DataTypes.STRING, defaultValue: "USER" },
 })
-const Basket = sequelize.define('basket', {
-	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-})
-const BasketMaterial = sequelize.define('basket_material', {
-	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-})
 const Material = sequelize.define('material', {
 	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 	name: { type: DataTypes.STRING, unique: true, allowNull: true },
@@ -28,14 +22,6 @@ const Application = sequelize.define('application',{
 	name: {type: DataTypes.STRING, allowNull:true},
 	number: {type: DataTypes.STRING, allowNull:true}
 })
-User.hasOne(Basket)
-Basket.belongsTo(User)
-
-Basket.hasMany(BasketMaterial)
-BasketMaterial.belongsTo(Basket)
-
-Material.hasMany(BasketMaterial)
-BasketMaterial.belongsTo(Material)
 
 Type.hasMany(Material)
 Material.belongsTo(Type)
@@ -43,8 +29,6 @@ Material.belongsTo(Type)
 
 module.exports = {
 	User,
-	Basket,
-	BasketMaterial,
 	Material,
 	Type,
 	Application
