@@ -55,11 +55,14 @@
 
 .topPlug {
 	height: 50px;
+	background-color: #F2B33A;
 }
 
 .topPlug>h2{
 	color: #444444;
-	margin-left: 40px;
+	text-align: center;
+	width: 100%;
+	font-size: 38px;
 }
 
 .AdminModal_content>.topPlug{

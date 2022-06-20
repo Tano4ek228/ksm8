@@ -9,7 +9,7 @@ const Modal_Admin = ({ activeAdmin, setActiveAdmin, children }) => {
             <div className={activeAdmin ? 'AdminModal_content active' : 'AdminModal_content'} onClick={(e) => e.stopPropagation()}>
 				<img src={exit} onClick={() => setActiveAdmin(false)} alt="" />
 				<div className='topPlug'>
-					<h2>Название товара</h2>
+					<h2>Керамзитобетон</h2>
 				</div>
 				<ContentModalOptions/>	
 			</div>
