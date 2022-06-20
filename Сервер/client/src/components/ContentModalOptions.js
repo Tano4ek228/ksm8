@@ -1,9 +1,9 @@
 import React, { useContext} from "react";
 import { observer } from "mobx-react-lite";
 import { Context } from "..";
-import DropDownLine from "./DropDownLine";
+import ContentModalOptionsLine from "./ContentModalOptionsLine";
 
-const DropDownOptions = observer(() => {
+const ContentModalOptions = observer(() => {
 	const {device} = useContext(Context)
 	return (
 					<div className="Panel_block">
@@ -13,8 +13,9 @@ const DropDownOptions = observer(() => {
 							<h2>НДС</h2>
 							<h2>На складе</h2>
 						</div>
-						<DropDownLine/>
-						<DropDownLine/>
+						<ContentModalOptionsLine/>
+						<ContentModalOptionsLine/>
+						<ContentModalOptionsLine/>
 						{/* {device.device.map(type => */}
 							{/* <DropDownLine></DropDownLine> */}
 						 {/* )} */}
@@ -26,5 +27,5 @@ const DropDownOptions = observer(() => {
 	)
 })
 
-export default DropDownOptions
+export default ContentModalOptions
 

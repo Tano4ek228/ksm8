@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import Save from "../pages/images/AdminPanel/save.png"
 import Del from "../pages/images/AdminPanel/del.png"
 
-const DropDownLine = observer(() => {
+const ContentModalOptionsLine = observer(() => {
 	return (
 		<div className="Panel_value_line">
 			<div className="product_info">
@@ -20,4 +20,4 @@ const DropDownLine = observer(() => {
 	)
 })
 
-export default DropDownLine
+export default ContentModalOptionsLine

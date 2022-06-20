@@ -6,6 +6,26 @@
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
 	background: linear-gradient(90deg, #02435d, #526e7a);
+	scrollbar-width: thin;
+	scrollbar-color: #E7E7E7 #526e7a;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;        
+}
+
+body::-webkit-scrollbar-track {
+	background: #526e7a;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+	background-color: #E7E7E7;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #444444;
+	border-radius: 20px;
+	border: 1px solid #000000;
 }
 
 a {

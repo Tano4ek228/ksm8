@@ -16,10 +16,7 @@ const AppRouter = observer (() => {
 		<Routes>
 			
 			{localStorage.getItem('data')==="ADMIN" && authRouters.map(({ path, Component }) =>
-				<Route key={path} path={path} element={<Component />}
-
-
-				/>
+				<Route key={path} path={path} element={<Component />}/>
 			)}
 			{publicRoutes.map(({ path, Component }) =>
 				<Route key={path} path={path} element={<Component />} />
@@ -28,10 +25,10 @@ const AppRouter = observer (() => {
 				path="*"
 				element={
 					<div>
-					<Modal active={modalActive} setActive={setModalActive}>
-					<p>{error}</p>
-				  	</Modal>
-					  </div>
+						<Modal active={modalActive} setActive={setModalActive}>
+							<p>{error}</p>
+						</Modal>
+					</div>
 				}
 				/>
 		</Routes>

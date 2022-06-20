@@ -1,5 +1,5 @@
 import React from "react";
-import DropDownOptions from '../components/DropDownOptions'
+import DropDownOptions from '../components/ContentModalOptions'
 
 const Basket = () => {
 	return (

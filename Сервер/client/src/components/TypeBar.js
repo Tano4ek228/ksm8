@@ -6,14 +6,15 @@ import Del from "../pages/images/AdminPanel/del.png"
 import Edit from "../pages/images/AdminPanel/edit.png"
 import Save from "../pages/images/AdminPanel/save.png"
 import { AllTypeDevices, deleteType, updateType } from "../http/DeviceApi";
-import DropDownOptions from "./DropDownOptions";
+import ContentModalOptions from "./ContentModalOptions";
+import Modal_Admin from "./modal_admin/admin_popup"
 
 
 const TypeBar = observer(() => {
 	const { device } = useContext(Context)
 	const [value, setValue] = useState('')
 	const [typeId, setTypeId] = useState()
-	const [DropDown, setDrowDown] = useState()
+	const [ModalActive, setModalActive] = useState(false)
 
 
 	const typeUpdate = (id) => {
@@ -27,9 +28,10 @@ const TypeBar = observer(() => {
 	}
 
 	const OnAddDown = (typeId) => {
-		setDrowDown(<DropDownOptions />)
-		setTypeId(typeId)
+		setModalActive(true);
+		setTypeId(typeId);
 	}
+
 	return (
 		<form >
 			{device.Types.map(type =>
@@ -42,22 +44,16 @@ const TypeBar = observer(() => {
 							></input>
 						</div>
 						<div className="btn_block">
-							<img className="editButt" src={Edit} alt=""
-								onClick={OnAddDown}
+							<img className="editButt" src={Edit} alt="" onClick={OnAddDown}></img>
 
-							></img>
+							<img src={Save} alt="" onClick={() => typeUpdate(type.id)}></img>
 
-							<img src={Save} alt=""
-								onClick={() => typeUpdate(type.id)}
-							></img>
-
-							<img src={Del} alt=""
-								onClick={() => typeDelete(type.id)}
-							></img>
+							<img src={Del} alt="" onClick={() => typeDelete(type.id)}></img>
 
 						</div>
 					</div>
-					{DropDown}
+					<Modal_Admin activeAdmin={ModalActive} setActiveAdmin={setModalActive}>
+					</Modal_Admin>
 				</div>
 			)}
 		</form>
