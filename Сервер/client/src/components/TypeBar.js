@@ -8,14 +8,15 @@ import Save from "../pages/images/AdminPanel/save.png"
 import { AllTypeDevices, deleteType, updateType } from "../http/DeviceApi";
 import ContentModalOptions from "./ContentModalOptions";
 import Modal_Admin from "./modal_admin/admin_popup"
+import Beton from "../pages/Beton";
 
 
 const TypeBar = observer(() => {
 	const { device } = useContext(Context)
-	const [value, setValue] = useState('')
+	const [value, setValue] = useState()
 	const [typeId, setTypeId] = useState()
+	const [typeName,setTypeName] = useState()
 	const [ModalActive, setModalActive] = useState(false)
-
 
 	const typeUpdate = (id) => {
 		updateType({ name: value, id })
@@ -27,13 +28,17 @@ const TypeBar = observer(() => {
 		window.location.reload()
 	}
 
-	const OnAddDown = (typeId) => {
-		setModalActive(true);
+	const OnAddDown = (typeId,typeName) => {
+		setTypeName(typeName)
 		setTypeId(typeId);
+		AllTypeDevices(typeId).then(data=>device.setTypeDevice(data));
+		setModalActive(true);
 	}
 
 	return (
-		<form >
+		<div>
+		<Modal_Admin activeAdmin={ModalActive} setActiveAdmin={setModalActive} children={typeName} typeid={typeId}>
+		</Modal_Admin>
 			{device.Types.map(type =>
 				<div>
 					<div className="block" id={type.id} key={type.id}>
@@ -44,7 +49,7 @@ const TypeBar = observer(() => {
 							></input>
 						</div>
 						<div className="btn_block">
-							<img className="editButt" src={Edit} alt="" onClick={OnAddDown}></img>
+							<img className="editButt" src={Edit} alt="" onClick={()=>OnAddDown(type.id, type.name)}></img>
 
 							<img src={Save} alt="" onClick={() => typeUpdate(type.id)}></img>
 
@@ -52,11 +57,9 @@ const TypeBar = observer(() => {
 
 						</div>
 					</div>
-					<Modal_Admin activeAdmin={ModalActive} setActiveAdmin={setModalActive}>
-					</Modal_Admin>
 				</div>
 			)}
-		</form>
+		</div>
 	)
 })
 

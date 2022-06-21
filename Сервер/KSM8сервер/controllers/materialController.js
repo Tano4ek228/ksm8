@@ -5,8 +5,8 @@ const { nextTick } = require('process');
 class materialController {
     async create(req, res, next) {
         try {
-            const { name, price, qant, typeId} = req.body
-            const material = await Material.create({ name, price, qant, typeId })
+            const { name, price, NDS, qant, typeId} = req.body
+            const material = await Material.create({ name, price, NDS, qant, typeId })
             return res.json(material)
         } catch (e) {
             next(ApiError.badRequest(e.message))
