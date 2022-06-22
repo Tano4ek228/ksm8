@@ -1,0 +1,33 @@
+.tovar_name_line{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.tovar_name_line>h2{
+	width: 260px;
+	text-align: center;
+	color: #F2B33A;
+	font-size: 28px;
+	border-bottom: 2px solid #F2B33A;
+	padding-bottom: 10px;
+}
+
+table{
+	border-collapse: separate;
+	border-spacing: 0 32px;
+	font-size: 24px;
+	margin: 0 auto;
+	font-weight: 700;
+}
+
+.tovar_tb{
+	border-bottom: 1px solid #bbbbbb;
+	/* border-radius: 5px; */
+	padding: 15px 100px;
+	margin: 0 0px;
+}
+
+.tb_right_botder{
+	border-right: 1px solid #bbbbbb;
+}
