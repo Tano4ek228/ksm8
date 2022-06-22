@@ -9,7 +9,6 @@ import Tovar from "../components/Tovar";
 const Beton = () => {
 	const { device } = useContext(Context)
 	AllTypeDevices("1").then(data=>device.setTypeDevice(data));
-
 	return (
 		<div class="container_main">
 			<div class="main_text">

@@ -7,7 +7,7 @@ const Tovar = () => {
 		<div >
             <table>
             {device.TypeDevice.map(type => 		
-                <tr>
+                <tr key={type.id}>
                     <tb>
                     {type.name}
                     </tb>
