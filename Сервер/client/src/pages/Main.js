@@ -1,5 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Zayavka from "../components/zayavka/Zayavka";
+import { NavLink } from "react-router-dom";
+import { DELIVERY_ROUTE } from "../utils/const";
+import {BETON_ROUTE} from '../utils/const';
+import {FBS_ROUTE} from '../utils/const';
+import {KERAMZITOBETON_ROUTE} from '../utils/const';
+import {AUTOBETONONASOS_ROUTE} from '../utils/const';
+import {JBI_ROUTE} from '../utils/const';
 // import { createAppl } from "../http/DeviceApi";
 
 
@@ -7,17 +14,22 @@ const Main = () => {
 	let elements = [];
 	let nameShop = ["Beton", "Fbs", "JBI", "KeramzitB"];
 	let nameTovar = ["Бетон", "ФБС", "Кольца стеновые", "Керамзитобетон"];
-	let nameLink = ["/beton", "/fbs_blocks", "/jbi_koltsa", "/keramzitobeton"];
+	let nameLink = [BETON_ROUTE, FBS_ROUTE, JBI_ROUTE, KERAMZITOBETON_ROUTE];
+	let desc_tovar = [
+		'Производство и доставка высококачественного товарного бетона и раствора всех марок.',
+		'Используются в качестве основных элементов при возведении стен и устройстве фундаментов.',
+		'Предлагает вам сотрудничество в сфере поставок ЖБИ изделий собственного производства.',
+		'Одна из разновидностей популярных лёгких бетонов, которые применяют в строительстве в наше время.'];
 	for (let i = 0; i < nameShop.length; i++) {
 		elements.push(
 			<div key={i} className="products line_right line_bottom">
 				<h2>{nameTovar[i]}</h2>
 				<img src={`/images/main_tovar/${nameShop[i]}.jpg`} alt=""></img>
 				<h3>
-					Производство и доставка высококачественного товарного бетона и раствора всех марок.
+					{desc_tovar[i]}
 				</h3>
 				<div className="btn_wh">
-					<a href={nameLink[i]}>Подробнее</a>
+					<NavLink to={nameLink[i]}>Подробнее</NavLink>
 				</div>
 			</div>
 		);
@@ -45,10 +57,10 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="/delivery">Заказать</a>
+					<NavLink to={DELIVERY_ROUTE}>Заказать</NavLink>
 				</div>
 				<div className="btn_podrobno">
-					<a href="/beton">Подробнее</a>
+					<NavLink to={BETON_ROUTE}>Подробнее</NavLink>
 				</div>
 			</div>
 		</div>
@@ -66,10 +78,10 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="/delivery">Заказать</a>
+					<NavLink to={DELIVERY_ROUTE}>Заказать</NavLink>
 				</div>
 				<div className="btn_podrobno">
-					<a href="/keramzitobeton">Подробнее</a>
+					<NavLink to={KERAMZITOBETON_ROUTE}>Подробнее</NavLink>
 				</div>
 			</div>
 		</div>
@@ -88,10 +100,10 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="/delivery">Заказать</a>
+					<NavLink to={DELIVERY_ROUTE}>Заказать</NavLink>
 				</div>
 				<div className="btn_podrobno">
-					<a href="/autopump">Подробнее</a>
+					<NavLink to={AUTOBETONONASOS_ROUTE}>Подробнее</NavLink>
 				</div>
 			</div>
 		</div>
@@ -109,10 +121,10 @@ const Main = () => {
 
 			<div className="btns">
 				<div className="btn_zakaz">
-					<a href="/delivery">Заказать</a>
+					<NavLink to={DELIVERY_ROUTE}>Заказать</NavLink>
 				</div>
 				<div className="btn_podrobno">
-					<a href="/fbs_blocks">Подробнее</a>
+					<NavLink to={FBS_ROUTE}>Подробнее</NavLink>
 				</div>
 			</div>
 		</div>
@@ -130,10 +142,10 @@ const Main = () => {
 
 			<div className="btns_Nov">
 				<div className="btn_zakaz">
-					<a href="/delivery">Заказать</a>
+					<NavLink to={DELIVERY_ROUTE}>Заказать</NavLink>
 				</div>
 				<div className="btn_podrobno">
-					<a href="/beton">Подробнее</a>
+					<NavLink to={BETON_ROUTE}>Подробнее</NavLink>
 				</div>
 			</div>
 		</div>

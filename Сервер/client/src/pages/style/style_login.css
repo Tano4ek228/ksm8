@@ -2,6 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 90vh;
 }
 
 .platforma {
@@ -9,7 +10,6 @@
 	color: #FDF7F5;
 	border-radius: 25px;
 	padding: 0px 35px 35px 35px;
-	margin-top: 150px;
 }
 
 .vhod {

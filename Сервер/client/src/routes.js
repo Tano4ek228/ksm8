@@ -71,14 +71,6 @@ export const authRouters = [
 		Component: AdminPanel
 	},
 	{
-		path: BASKET_ROUTE,
-		Component: Basket
-	},
-	{
-		path: MAIN_ROUTE,
-		Component: Main
-	},
-	{
 		path: LOOKAPPLICATIONS_ROUTE,
 		Component: LookApplications
 	}

@@ -473,11 +473,45 @@ main {
 	margin: 0 auto;
 }
 
+/* -------Отступы  для страницы "Продукция" ----------*/
+
+.container_products {
+	padding-top: 40px;
+	width: 90%;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.prod_text{
+	color: #E7E7E7;
+}
+
+.prod_text>.h1_tovar_name{
+	padding-bottom: 10px;
+    border-bottom: 3px solid #BCBCBC;
+    margin-top: 50px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+/* - ^^^^^^ Отступы  для страницы "Продукция" ^^^^^*/
 
 /* Блок товаров */
 
 .tovar {
 	background: linear-gradient(#25252554, #00597600);
+	padding: 40px 0 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+/* Блок товаров для страницы "Продукция" */
+
+.tovar_shop {
 	padding: 40px 0 20px 0;
 	display: flex;
 	justify-content: center;

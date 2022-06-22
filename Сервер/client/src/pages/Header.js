@@ -3,6 +3,13 @@ import React, { useContext } from "react";
 import { Navigate, NavLink } from "react-router-dom";
 import { Context } from "../index";
 import { DELIVERY_ROUTE } from "../utils/const";
+import {SHOP_ROUTE} from '../utils/const';
+import {BETON_ROUTE} from '../utils/const';
+import {FBS_ROUTE} from '../utils/const';
+import {JBI_ROUTE} from '../utils/const';
+import {KERAMZITOBETON_ROUTE} from '../utils/const';
+import {AUTOBETONONASOS_ROUTE} from '../utils/const';
+import {LOGIN_ROUTE} from '../utils/const';
 
 
 const Header = observer(() => {
@@ -24,14 +31,14 @@ const Header = observer(() => {
 
 				<ul className="header-menu">
 					<li>
-						<a href="/Shop">Продукция</a>
+						<NavLink to={SHOP_ROUTE}>Продукция</NavLink>
 						<ul className="drop-down_menu">
 							<div className="drop-down_menu_bg">
-								<li><a href="/beton">Бетон</a></li>
-								<li><a href="/jbi_koltsa">Кольца ЖБИ</a></li>
-								<li><a href="/fbs_blocks">Блоки ФБС</a></li>
-								<li><a href="/keramzitobeton">Керамзитобетон</a></li>
-								<li><a href="/autopump">Автобетононасос</a></li>
+								<li><NavLink to={BETON_ROUTE}>Бетон</NavLink></li>
+								<li><NavLink to={JBI_ROUTE}>Кольца ЖБИ</NavLink></li>
+								<li><NavLink to={FBS_ROUTE}>Блоки ФБС</NavLink></li>
+								<li><NavLink to={KERAMZITOBETON_ROUTE}>Керамзитобетон</NavLink></li>
+								<li><NavLink to={AUTOBETONONASOS_ROUTE}>Автобетононасос</NavLink></li>
 							</div>
 						</ul>
 					</li>
@@ -40,7 +47,7 @@ const Header = observer(() => {
 					<li><a href="#kontaktsFooter">Контакты</a></li>
 				</ul>
 				{user.isAuth === false ?
-				(<a className="button_sign_in" href="/login">Войти</a>)
+				(<NavLink className="button_sign_in" to={LOGIN_ROUTE}>Войти</NavLink>)
 				:(
 				<div>
 				<a className="button_sign_in" href="/" onClick={()=>logOut()}>Выйти</a>
