@@ -10,7 +10,7 @@ export const fetchDevisec = async () => {
 	return data; 
 }
 export const AllTypeDevices = async (id) =>{
-	const {data} = await $host.get('api/material',id)
+	const {data} = await $host.get('api/material/?typeId='+id)
 	return data;
 }
 

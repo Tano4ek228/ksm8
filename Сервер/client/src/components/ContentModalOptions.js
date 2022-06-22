@@ -1,10 +1,15 @@
 import React, { useContext} from "react";
 import { observer } from "mobx-react-lite";
-import { Context } from "..";
 import ContentModalOptionsLine from "./ContentModalOptionsLine";
+import { createDevice } from "../http/DeviceApi";
 
-const ContentModalOptions = observer(() => {
-	const {device} = useContext(Context)
+const ContentModalOptions = observer((typeId) => {
+
+	const createMaterials = (typeid) => {
+		// createDevice({name:"",price:null,NDS:null,qant:null,typeId:typeid.typeId}).then(data => { "" })
+		console.log("Второй");
+	}
+
 	return (
 					<div className="Panel_block">
 						<div className="Panel_text_line">
@@ -14,14 +19,10 @@ const ContentModalOptions = observer(() => {
 							<h2>На складе</h2>
 						</div>
 						<ContentModalOptionsLine/>
-						<ContentModalOptionsLine/>
-						<ContentModalOptionsLine/>
-						{/* {device.device.map(type => */}
-							{/* <DropDownLine></DropDownLine> */}
-						 {/* )} */}
-
 						<div className="btn_add_tovar">
-							<button className="buttonAddTovar">Добавить новое поле</button>
+							<button className="buttonAddTovar" 
+							onClick={createMaterials(typeId)}
+							>Добавить новое поле</button>
 						</div>
 					</div>
 	)
