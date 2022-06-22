@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import keramzitobeton_img from "./images/keramzitobeton/keramzitobeton.jpg"
 import Zayavka from "../components/zayavka/Zayavka";
+import Tovar from "../components/Tovar";
+import { AllTypeDevices } from "../http/DeviceApi";
+import { Context } from "..";
 
 const Keramzitobeton = () => {
+	const { device } = useContext(Context)
+	AllTypeDevices("4").then(data=>device.setTypeDevice(data));
 	return(
 		<div class="container_main">
 			<div class="main_text">
@@ -25,9 +30,9 @@ const Keramzitobeton = () => {
 				<p>
 					В нашем каталоге представлен обширный ассортимент качественных строительных материалов разных фракций и марок. Вы сможете подобрать керамзитобетон и керамзит согласно таким требованиям как плотность, прочность марки, стоимость за 1 м3.
 	 			</p>
-				{/* <div className="beton_info">
-					
-				</div> */}
+				<div className="beton_info">
+				<Tovar/>
+				</div>
 				<div class="advantages_bg">
 					<h2 class="preimushestva">Преимущества керамзитобетона</h2>
 					<ul class="advantages advantages_tovar">

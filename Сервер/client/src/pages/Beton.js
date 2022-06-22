@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import imgbeton from './images/beton/beton.jpg';
 import './style/style_tovar_inf.css';
 import Zayavka from "../components/zayavka/Zayavka";
+import { AllTypeDevices } from "../http/DeviceApi";
+import { Context } from "..";
+import Tovar from "../components/Tovar";
 
 const Beton = () => {
+	const { device } = useContext(Context)
+	AllTypeDevices("1").then(data=>device.setTypeDevice(data));
+
 	return (
 		<div class="container_main">
 			<div class="main_text">
@@ -28,9 +34,9 @@ const Beton = () => {
 				</p>
 				<h1 className="h1Tovarname">Бетон товарный:</h1>
 
-				{/* <div className="beton_info">
-
-				</div> */}
+				<div className="beton_info">
+				<Tovar/>
+				</div>
 
 				<h2 className="betonm">Бетон М100</h2>
 				<p className="ShiftRight">

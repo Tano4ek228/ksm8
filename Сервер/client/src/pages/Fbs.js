@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import fbs_img from "./images/fbs/fbs.jpg"
 import Zayavka from "../components/zayavka/Zayavka";
+import { AllTypeDevices } from "../http/DeviceApi";
+import { Context } from "..";
+import Tovar from "../components/Tovar";
 
 const FBS = () => {
+	const { device } = useContext(Context)
+	AllTypeDevices("3").then(data=>device.setTypeDevice(data));
+
 	return (
 		<div class="container_main">
 			<div class="main_text">
@@ -51,9 +57,9 @@ const FBS = () => {
 					Стоимость ФБС в Ростове относительно низкая, с учётом того что цены на строительные материалы постоянно растут и заливая например, монолитные конструкции вы понесёте значительно большие затраты ( устройство опалубки, покупка и установка арматуры, аренда спецтехники и затраты на рабочую силу), нежели затраты на покупку блоков, тем боле что  цены на фундаментный блок остаются на прежнем уровне что и год назад.
 				</p>
 				<h1 className="h1Tovarname">Цена блока ФБС за 1 шт в Ростове-на-Дону</h1>
-				{/* <div className="beton_info">
-
-				</div> */}
+				<div className="beton_info">
+				<Tovar/>
+				</div>
 			</div>
 
 			<Zayavka/>
